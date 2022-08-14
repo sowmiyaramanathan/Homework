@@ -1,7 +1,7 @@
 subjects = []                               #initializing subjects list to store the marks of students
 total_number_of_subjects = 5                #initializing the number of subjects to 5
 for mark in range(total_number_of_subjects):            #using for loop five times to get five subjects mark
-    subject_mark = int(input("Enter the student mark for subject : "))          #reading ssubject mark from the user
+    subject_mark = int(input("Enter the student mark for subject : "))          #reading subject mark from the user
     subjects.append(subject_mark)                                               #using append function to add the marks into the list
 
 count_for_60 = 0                        #initializing count to 0, to count the number of subjects where the student has scored above 60
