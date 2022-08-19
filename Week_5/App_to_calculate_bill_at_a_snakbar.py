@@ -2,7 +2,7 @@ coffee_price = 100      #initializing coffee price
 vadai_price = 100       #initializing vadai price
 sandwich_price = 200    #initializing sandwich price
 coke_price = 60         #initializing coke price
-total_price = 0         #initialiaing total price as 0
+total_price = 0         #initializing total price as 0
 
 total_coffee = int(input("Enter the number of coffee the customer bought: "))   #reading the number of coffee the customer bought
 total_vadai = int(input("Enter the number of vadais the customer bought: "))    #reading the number of vadai the customer bought
