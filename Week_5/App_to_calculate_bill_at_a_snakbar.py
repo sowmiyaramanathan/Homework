@@ -21,11 +21,11 @@ if(total_coffee>=1 and total_vadai>=1 and total_sandwich>=1 or total_coke>=1):  
 elif(total_price>1000):     #using if to check if the total price is greater than 1000
     discount = 20       #initializing a discount of 20
     total_price = total_price - (total_price * discount / 100)  #applying the discount on the total price
-if(total_coffee>=1):        #using if to check if total coffee is greater than 1 to see if we can apply discount
+elif(total_coffee>=1):        #using if to check if total coffee is greater than 1 to see if we can apply discount
     if(total_sandwich > 1 or total_vadai > 2):  #using if to check if sandwich is more than 1 or total vadai is greater than 2
         total_price -= coffee_price                     #subtracting the actual coffee price from the total price to apply discount and then calculate the total price
         price_of_one_coffee = 50                            #initializing the price of as 50
         coffee_price = total_coffee * price_of_one_coffee   #calculating coffee price by multiplying the number of coffee with the new price for each coffee the customer bought
-        total_price += coffee_price                     #calculating the total price by adding the total price with the coffee price
+        total_price += coffee_price         #calculating the total price by adding the total price with the coffee price
 
 print("Total cost of items : ", total_price)            #printing the total cost
