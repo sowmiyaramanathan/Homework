@@ -1,13 +1,14 @@
 amount_spent_on_employees = 200     #initializing employee salary as 200
-amount_spent_on_cakes = 0       #initializing amount spent for cakes as 0 since we do not know it already
-amount_spent_on_breads = 0      #initializing amount spent for bread as 0 since we do not know it already
-amount_earned_on_cake = 0       #initializing amount gained from cakes as 0 since we do not know it already
-amount_earned_on_bread = 0      #initializing amount gained from bread as 0 since we do not know it already
-total_amount_earned = 0         #initializing total amount earned as 0 since we do not know it already
-total_amount_spent = 0      #initializing total amount spent as 0 since we do not know it already
-profit_for_a_day = 0        #initializing profit of the day as 0 since we do not know it already
+amount_spent_on_cakes = 0           #initializing amount spent for cakes as 0 since we do not know it already
+amount_spent_on_breads = 0          #initializing amount spent for bread as 0 since we do not know it already
+amount_earned_on_cake = 0           #initializing amount gained from cakes as 0 since we do not know it already
+amount_earned_on_bread = 0          #initializing amount gained from bread as 0 since we do not know it already
+total_amount_earned = 0             #initializing total amount earned as 0 since we do not know it already
+total_amount_spent = 0              #initializing total amount spent as 0 since we do not know it already
+profit_for_a_day = 0                #initializing profit of the day as 0 since we do not know it already
+min_number_of_customers = 10
 
-for i in range(1,11):       #using for loop from 1 to 10 since 10 customers are coming to the shop every day
+for i in range(min_number_of_customers):       #using for loop from 1 to 10 since 10 customers are coming to the shop every day
     item = input("What did the customer bought? Cake / Bread : ")       #reading what the customer would like to buy
     if(item == "Cake"):                                                 #using if statement to check if the customer need cakes
         number_of_cake = int(input("Enter the number of cakes: "))      #reading number of cake the customer wants

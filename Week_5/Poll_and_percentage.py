@@ -11,7 +11,7 @@ for student in range(min_number_of_students):       #using got to get the respon
     if(answer == "No Comment"):                     #using if to check whether the user given No Comment as input
         break                                       #using break to stop asking for the input i.e.,exiting for loop
     if(gender == "Female" and answer == "Online class"):    #using if to check whether the student is female and her response is online class
-        count_for_onlineclass_from_female +=1               #increasing the count of of female students whose answer was online class by
+        count_for_onlineclass_from_female +=1               #increasing the count of female students whose answer was online class
 
 percentage = count_for_onlineclass_from_female * 100 / count_for_responses      #calculating the percentage of response of female students whose answer was online class by multiplying the number of such answers with 100 and diving it by total count of responses
-print(percentage, "percentage of female students like online class")            #printing the percentage
+print(percentage, "% of female students like online class")            #printing the percentage

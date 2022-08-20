@@ -4,6 +4,7 @@ sandwich_price = 200    #initializing sandwich price
 coke_price = 60         #initializing coke price
 total_price = 0         #initializing total price as 0
 
+print("Coffee - Rs.100 \nVadai - Rs. 100 \nSandwich - Rs.200 \nCoke - Rs.60") #printing available items with their price
 total_coffee = int(input("Enter the number of coffee the customer bought: "))   #reading the number of coffee the customer bought
 total_vadai = int(input("Enter the number of vadais the customer bought: "))    #reading the number of vadai the customer bought
 total_sandwich = int(input("Enter the number of sandwich the customer bought: "))   #reading the number of sandwich the customer bought
@@ -15,7 +16,7 @@ sandwich_price *= total_sandwich    #calculating price of sandwich by multiplyin
 coke_price *= total_coke        #calculating price of coke by multiplying number of coke with price
 total_price =  coffee_price + vadai_price + sandwich_price + coke_price     #calculating total price of items by adding the price of each items
 
-if(total_coffee >= 1 and total_vadai >= 1 and total_sandwich >= 1 or total_coke >= 1):  #using if to check if the customer has bought atleast one or more number of items in each
+if(total_coffee >= 1 and total_vadai >= 1 and total_sandwich >= 1 and total_coke >= 1):  #using if to check if the customer has bought atleast one or more number of items in each
     discount = 20       #initializing a discount of 20
     total_price = total_price - (total_price * discount / 100)  #applying the discount on the total price
 elif(total_price > 1000):     #using if to check if the total price is greater than 1000
@@ -28,4 +29,4 @@ elif(total_coffee >= 1):        #using if to check if total coffee is greater th
         coffee_price = total_coffee * price_of_one_coffee   #calculating coffee price by multiplying the number of coffee with the new price for each coffee the customer bought
         total_price += coffee_price         #calculating the total price by adding the total price with the coffee price
 
-print("Total cost of items : ", total_price)            #printing the total cost
+print("Total cost of items : Rs.", total_price)            #printing the total cost
