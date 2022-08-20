@@ -1,7 +1,7 @@
 tomato_price = 10.5     #price of tomato is 10.5
 budget = float(input("Enter your budget : "))       #reading budget from the customer to know how many kg of vegetables the customer can buy with that amount
 print("1. Chennai\n2. Trichy\n3. Madurai")          #printing the cities the customer can enter
-city = input("Enter your city : ")      #reading the city name as the price of onion varies from one city to another
+city = input("Enter your city from one of the above : ")      #reading the city name as the price of onion varies from one city to another
 kg_of_onions = 0        #initializing total kg of onions to 0
 kg_of_tomatoes = 0      #initializing total kg of tomatoes to 0
 
