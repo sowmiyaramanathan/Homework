@@ -31,3 +31,33 @@ else:                               #using else to calculate the number of kgs t
     print("Total kg of onions you can buy within your budget: ", kg_of_onions, "kg")        #printing the total kg of onion the customer can buy with the budget amount
     print("or")                                                                             #printing otherwise
     print("Total kg of tomatoes you can buy within your budget: ", kg_of_tomatoes, "kg")        #printing the total kg of tomatoes the customer can buy with the budget amount
+    
+    
+
+#in madurai
+#Enter your budget : 100
+#1. Chennai
+#2. Trichy
+#3. Madurai
+#Enter your city from one of the above : Madurai
+#Total kg of onions you can buy within your budget:  2 kg
+#or
+#Total kg of tomatoes you can buy within your budget:  9 kg
+#in trichy
+#Enter your budget : 42
+#1. Chennai
+#2. Trichy
+#3. Madurai
+#Enter your city from one of the above : Trichy
+#Total kg of onions you can buy within your budget:  1 kg
+#or
+#Total kg of tomatoes you can buy within your budget:  3 kg
+#in chennai
+#Enter your budget : 2
+#1. Chennai
+#2. Trichy
+#3. Madurai
+#Enter your city from one of the above : Chennai
+#Total kg of onions you can buy within your budget:  0 kg
+#or
+#Total kg of tomatoes you can buy within your budget:  0 kg
