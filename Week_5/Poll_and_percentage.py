@@ -15,3 +15,191 @@ for student in range(min_number_of_students):       #using got to get the respon
 
 percentage = count_for_onlineclass_from_female * 100 / count_for_responses      #calculating the percentage of response of female students whose answer was online class by multiplying the number of such answers with 100 and diving it by total count of responses
 print(percentage, "% of female students like online class")            #printing the percentage
+
+
+
+#test case with ten entries
+#Select
+#1.Male
+#2.Female
+#Male
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Mixed
+#Select
+#1.Male
+#2.Female
+#Male
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Mixed
+#Select
+#1.Male
+#2.Female
+#Male
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Online class
+#Select
+#1.Male
+#2.Female
+#Female
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Online class
+#Select
+#1.Male
+#2.Female
+#Female
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#In person class
+#Select
+#1.Male
+#2.Female
+#Female
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Mixed
+#Select
+#1.Male
+#2.Female
+#Female
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Online class
+#Select
+#1.Male
+#2.Female
+#Male
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Mixed
+#Select
+#1.Male
+#2.Female
+#Male
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Mixed
+#Select
+#1.Male
+#2.Female
+#Female
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Online class
+#30.0 % of female students like online class
+
+#test case with no comment in one response
+#Select
+#1.Male
+#2.Female
+#Male
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Mixed
+#Select
+#1.Male
+#2.Female
+#Female
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Online class
+#Select
+#1.Male
+#2.Female
+#Male
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Online class
+#Select
+#1.Male
+#2.Female
+#Female
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Online class
+#Select
+#1.Male
+#2.Female
+#Male
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Mixed
+#Select
+#1.Male
+#2.Female
+#Female
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#In person class
+#Select
+#1.Male
+#2.Female
+#Female
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#Online class
+#Select
+#1.Male
+#2.Female
+#Male
+#Which one do you like?
+#1.Online class
+#2.In person class
+#3.Mixed
+#To end, enter 'No Comment'
+#No Comment
+#37.5 % of female students like online class
