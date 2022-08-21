@@ -19,3 +19,18 @@ if(amount_to_be_spent_by_the_bride > amount_saved_by_the_bride):      #using if 
     print("The bride needs loan. And the loan amount is ", amount_needed_by_the_bride)          #printing amount needed by the bride
 else:                         #using else to let know that the bride has sufficient amount and doesn't need extra amount
     print("The bride does not need a loan.")        #printing that the bride doesn't a loan
+    
+    
+    
+#for lunch cost Rs.0
+#Enter the lunch cost per person : 0
+#Enter the number of persons : 100
+#The bride does not need a loan.
+#for lunch cost Rs.50
+#Enter the lunch cost per person : 50
+#Enter the number of persons : 500
+#The bride does not need a loan.
+#for lunch cost Rs.100
+#Enter the lunch cost per person : 100
+#Enter the number of persons : 1000
+#The bride needs loan. And the loan amount is  65000.0
