@@ -26,10 +26,12 @@ else:                         #using else to let know that the bride has suffici
 #Enter the lunch cost per person : 0
 #Enter the number of persons : 100
 #The bride does not need a loan.
+
 #for lunch cost Rs.50
 #Enter the lunch cost per person : 50
 #Enter the number of persons : 500
 #The bride does not need a loan.
+
 #for lunch cost Rs.100
 #Enter the lunch cost per person : 100
 #Enter the number of persons : 1000
