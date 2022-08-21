@@ -30,3 +30,69 @@ if(count_for_60 == 5 or (count_for_90 >= 3 and count_for_40 >= 2) or (count_for_
     print("Student passed the degree")              
 else:                                           #using else to indicate that the student has not obtained the required scores
     print("Student failed in the degree")       #printing that the student has not passed the degree
+    
+    
+    
+#for marks that does not meet any condition
+#Enter the student mark for subject : 60
+#Enter the student mark for subject : 65
+#Enter the student mark for subject : 34
+#Enter the student mark for subject : 50
+#Enter the student mark for subject : 45
+#Student failed in the degree
+
+#for marks scored 90 or above in 3 or more subjects and 40 or above in 2 or more subjects
+#Enter the student mark for subject : 45
+#Enter the student mark for subject : 48
+#Enter the student mark for subject : 98
+#Enter the student mark for subject : 96
+#Enter the student mark for subject : 93
+#Student passed the degree
+
+#for marks scored 90 or above in 3 or more subjects and 40 or above in 2 or more subjects
+#Enter the student mark for subject : 95
+#Enter the student mark for subject : 48
+#Enter the student mark for subject : 43
+#Enter the student mark for subject : 94
+#Enter the student mark for subject : 93
+#Student passed the degree
+
+#for marks scored 75 or above in 3 or more subjects and 50 or above in 2 or more subjects
+#Enter the student mark for subject : 78
+#Enter the student mark for subject : 76
+#Enter the student mark for subject : 80
+#Enter the student mark for subject : 59
+#Enter the student mark for subject : 57
+#Student passed the degree
+
+#for marks scored 75 or above in 3 or more subjects and 50 or above in 2 or more subjects
+#Enter the student mark for subject : 56
+#Enter the student mark for subject : 54
+#Enter the student mark for subject : 75
+#Enter the student mark for subject : 80
+#Enter the student mark for subject : 89
+#Student passed the degree
+
+#for marks scored 75 or above in 3 or more subjects and 50 or above in 2 or more subjects
+#Enter the student mark for subject : 78
+#Enter the student mark for subject : 58
+#Enter the student mark for subject : 79
+#Enter the student mark for subject : 55
+#Enter the student mark for subject : 89
+#Student passed the degree
+
+#for marks below 60 in atleast 1 subject
+#Enter the student mark for subject : 56
+#Enter the student mark for subject : 24
+#Enter the student mark for subject : 87
+#Enter the student mark for subject : 68
+#Enter the student mark for subject : 90
+#Student failed in the degree
+
+#for marks that does not meet any condition
+#Enter the student mark for subject : 65
+#Enter the student mark for subject : 98
+#Enter the student mark for subject : 78
+#Enter the student mark for subject : 57
+#Enter the student mark for subject : 48
+#Student failed in the degree
