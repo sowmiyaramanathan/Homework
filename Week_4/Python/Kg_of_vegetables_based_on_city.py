@@ -30,3 +30,52 @@ else:                           #using else to calculate the number of kgs the c
 
     print("Total kg of onions you can buy within your budget: ", kg_of_onions, "kg")        #printing the total kg of onion the customer can buy with the budget amount
     print("Total kg of tomatoes you can buy within your budget: ", kg_of_tomatoes, "kg")    #printing the total kg of tomatoes the customer can buy with the budget amount
+    
+    
+    #for budget 0 in chennai
+#Enter your budget : 0
+#1. Chennai
+#2. Trichy
+#3. Madurai
+#Enter your city from one of the above : Chennai
+#You cannot buy vegetables
+#in chennai
+#Enter your budget : 420
+#1. Chennai
+#2. Trichy
+#3. Madurai
+#Enter your city from one of the above : Chennai
+#Total kg of onions you can buy within your budget:  14 kg
+#Total kg of tomatoes you can buy within your budget:  40 kg
+#in chennai
+#Enter your budget : 20
+#1. Chennai
+#2. Trichy
+#3. Madurai
+#Enter your city from one of the above : Chennai
+#Total kg of onions you can buy within your budget:  0 kg
+#Total kg of tomatoes you can buy within your budget:  1 kg
+#in trichy
+#Enter your budget : 12
+#1. Chennai
+#2. Trichy
+#3. Madurai
+#Enter your city from one of the above : Trichy
+#Total kg of onions you can buy within your budget:  0 kg
+#Total kg of tomatoes you can buy within your budget:  1 kg
+#in trichy
+#Enter your budget : 800
+#1. Chennai
+#2. Trichy
+#3. Madurai
+#Enter your city from one of the above : Trichy 
+#Total kg of onions you can buy within your budget:  29 kg
+#Total kg of tomatoes you can buy within your budget:  76 kg
+#in madurai
+#Enter your budget : 500
+#1. Chennai
+#2. Trichy
+#3. Madurai
+#Enter your city from one of the above : Madurai
+#Total kg of onions you can buy within your budget:  14 kg
+#Total kg of tomatoes you can buy within your budget:  47 kg
