@@ -24,11 +24,13 @@ else:
 #for budget 0
 #Enter your budget : 0
 #You cannot buy vegetables
+
 #for budget above 100
 #Enter your budget : 175
 #Total kg of onions you can buy within your budget:  8 kg
 #or
 #Total kg of tomatoes you can buy within your budget:  16 kg
+
 ##for budget 500
 #Enter your budget : 500
 #Total kg of onions you can buy within your budget:  25 kg
