@@ -43,6 +43,7 @@ else:                               #using else to calculate the number of kgs t
 #Total kg of onions you can buy within your budget:  2 kg
 #or
 #Total kg of tomatoes you can buy within your budget:  9 kg
+
 #in trichy
 #Enter your budget : 42
 #1. Chennai
@@ -52,6 +53,7 @@ else:                               #using else to calculate the number of kgs t
 #Total kg of onions you can buy within your budget:  1 kg
 #or
 #Total kg of tomatoes you can buy within your budget:  3 kg
+
 #in chennai
 #Enter your budget : 2
 #1. Chennai
