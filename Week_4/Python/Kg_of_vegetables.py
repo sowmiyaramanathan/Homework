@@ -19,3 +19,18 @@ else:
     print("Total kg of onions you can buy within your budget: ", kg_of_onions, "kg")        #printing the total kg of onion the customer can buy with the budget amount
     print("or")                                                                             #printing otherwise
     print("Total kg of tomatoes you can buy within your budget: ", kg_of_tomatoes, "kg")    #printing the total kg of tomatoes the customer can buy with the budget amount
+    
+    
+#for budget 0
+#Enter your budget : 0
+#You cannot buy vegetables
+#for budget above 100
+#Enter your budget : 175
+#Total kg of onions you can buy within your budget:  8 kg
+#or
+#Total kg of tomatoes you can buy within your budget:  16 kg
+##for budget 500
+#Enter your budget : 500
+#Total kg of onions you can buy within your budget:  25 kg
+#or
+#Total kg of tomatoes you can buy within your budget:  47 kg
