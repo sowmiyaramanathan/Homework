@@ -1,16 +1,16 @@
-first_word = input("Enter a word : ")
-second_word = input("Enter a word : ")
-same_words = []
+first_word = input("Enter a word : ")       #reading a string from the user
+second_word = input("Enter a word : ")      #reading another string from the user
+same_words = []                  #declaring a list for storing the characters that are present in both the strings
 
-for letter1 in range(len(first_word)):
-    for letter2 in range(len(second_word)):
-        if first_word[letter1] in same_words:
-            break
-        else:
-            if first_word[letter1] in second_word:
-                same_words.append(first_word[letter1])
+for letter1 in range(len(first_word)):          #using for to iterate through the first string
+    for letter2 in range(len(second_word)):     #using for to iterate through the second string
+        if first_word[letter1] in same_words:   #using if to check whether the character in first string is already present in the same words list to avoid printing the characters again and again
+            break                               #using break to come out of the inner loop 
+        else:                                   #using else to check for similarity 
+            if first_word[letter1] in second_word:      #using if to check whether the current character in first string is same as any character in the second string
+                same_words.append(first_word[letter1])   #adding the current character to the corresponding list
 
-print(*same_words)
+print(*same_words)      #printing the same words list
 
 
 
