@@ -29,7 +29,7 @@ else:                               #using else to calculate the number of kgs t
         tomato_price += 10.5        #increasing the price of tomatoes by the price amount for 1 kg
         kg_of_tomatoes += 1     #increasing the quantity of tomatoes 1kg at a time
     print("Total kg of onions you can buy within your budget: ", kg_of_onions, "kg")        #printing the total kg of onion the customer can buy with the budget amount
-    print("or")                                                                             #printing otherwise
+    print("or")                                                                                 #printing otherwise
     print("Total kg of tomatoes you can buy within your budget: ", kg_of_tomatoes, "kg")        #printing the total kg of tomatoes the customer can buy with the budget amount
     
     
