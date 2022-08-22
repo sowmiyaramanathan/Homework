@@ -34,3 +34,48 @@ total_amount_spent = amount_spent_on_cakes + amount_spent_on_breads + amount_spe
 profit_for_a_day = total_amount_earned - total_amount_spent     #calculating total profit for the day by subtracting total amount spent from total amount earned
 
 print("Profit for the day: ", profit_for_a_day)     #printing total profit for the day
+
+
+
+#profit with limited supply of items
+#Enter the supply of cake : 50
+#Enter the supply of bread : 40
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 1 
+#What did the customer bought? Cake / Bread : Bread
+#Enter the number of bread: 20
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 5
+#What did the customer bought? Cake / Bread : Bread
+#Enter the number of bread: 15
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 30
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 2
+#What did the customer bought? Cake / Bread : Bread
+#Enter the number of bread: 20
+#No sufficient bread in stock. Available number of bread :  5
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 3
+#What did the customer bought? Cake / Bread : Bread
+#Enter the number of bread: 2
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 20
+#No sufficient cake in stock. Available number of bread :  9
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 4
+#What did the customer bought? Cake / Bread : Bread
+#Enter the number of bread: 3
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 3
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 1
+#What did the customer bought? Cake / Bread : Bread
+#Enter the number of bread: 3
+#No sufficient bread in stock. Available number of bread :  0
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 2
+#No sufficient cake in stock. Available number of bread :  1
+#What did the customer bought? Cake / Bread : Cake
+#Enter the number of cakes: 1
+#Profit for the day:  1000

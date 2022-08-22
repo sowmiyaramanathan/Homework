@@ -28,3 +28,83 @@ for salary in range(months_per_year):    #using for loop 12 times(for all months
 sum_of_monthly_salaries = sum(salary_per_month)                          #calculating sum of monthly salaries
 average_of_monthly_per_year = round(sum_of_monthly_salaries / months_per_year)  #calculating average of monthly salary per year
 print("Average salary per year : Rs. ", average_of_monthly_per_year)     #printing average of monthly salary per year
+
+
+
+#test case 1 with positive inputs
+#Enter the total sale for month 1
+#2
+#Enter the total sale for month 2
+#10
+#Enter the total sale for month 3
+#5
+#Enter the total sale for month 4
+#3
+#Enter the total sale for month 5
+#12
+#Enter the total sale for month 6
+#7
+#Enter the total sale for month 7
+#0
+#Enter the total sale for month 8
+#0
+#Enter the total sale for month 9
+#3
+#Enter the total sale for month 10
+#25
+#Enter the total sale for month 11
+#13
+#Enter the total sale for month 12
+#6
+#Salary for month  1  : Rs.  12000
+#Salary for month  2  : Rs.  20500
+#Salary for month  3  : Rs.  15000
+#Salary for month  4  : Rs.  13000
+#Salary for month  5  : Rs.  23500
+#Salary for month  6  : Rs.  17500
+#Salary for month  7  : Rs.  10000
+#Salary for month  8  : Rs.  10000
+#Salary for month  9  : Rs.  13000
+#Salary for month  10  : Rs.  25000
+#Salary for month  11  : Rs.  24500
+#Salary for month  12  : Rs.  16500
+#Average salary per year : Rs.  16708
+
+#test case 2 with negative inputs
+#Enter the total sale for month 1
+#0
+#Enter the total sale for month 2
+#-9
+#Enter the total sale for month 3
+#0
+#Enter the total sale for month 4
+#5
+#Enter the total sale for month 5
+#0
+#Enter the total sale for month 6
+#0
+#Enter the total sale for month 7
+#-98
+#Enter the total sale for month 8
+#2
+#Enter the total sale for month 9
+#2
+#Enter the total sale for month 10
+#0
+#Enter the total sale for month 11
+#0
+#Enter the total sale for month 12
+#0
+#Salary for month  1  : Rs.  10000
+#Salary for month  2  : Rs.  10000
+#Salary for month  3  : Rs.  10000
+#Salary for month  4  : Rs.  15000
+#Salary for month  5  : Rs.  10000
+#Salary for month  6  : Rs.  10000
+#Salary for month  7  : Rs.  10000
+#Salary for month  8  : Rs.  12000
+#Salary for month  9  : Rs.  12000
+#Salary for month  10  : Rs.  10000
+#Salary for month  11  : Rs.  10000
+#Salary for month  12  : Rs.  10000
+#Average salary per year : Rs.  10750

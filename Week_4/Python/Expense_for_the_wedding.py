@@ -11,3 +11,20 @@ decoration_cost = (hall_cost_per_person * number_of_persons) / 2        #calcula
 
 total_expense_for_the_wedding = total_cost_for_all_persons + decoration_cost    #calculating total expense for the wedding by adding total cost for the expected persong and decoration cost
 print("Total Expense for the wedding : Rs.", total_expense_for_the_wedding)        #printing the total expense for the wedding
+
+
+
+#for lunch cost Rs.30
+#Enter the lunch cost per person : 30
+#Enter the number of persons : 124
+#Total Expense for the wedding : Rs. 8556.0
+
+#for lunch cost Rs.0
+#Enter the lunch cost per person : 0
+#Enter the number of persons : 100
+#Total Expense for the wedding : Rs. 0.0
+
+#for lunch cost Rs.50
+#Enter the lunch cost per person : 50
+#Enter the number of persons : 500
+#Total Expense for the wedding : Rs. 57500.0

@@ -30,3 +30,49 @@ elif(total_coffee >= 1):        #using if to check if total coffee is greater th
         total_price += coffee_price         #calculating the total price by adding the total price with the coffee price
 
 print("Total cost of items : Rs.", total_price)            #printing the total cost
+
+
+
+#discount for buying all items atleast once
+#Coffee - Rs.100 
+#Vadai - Rs. 100
+#Sandwich - Rs.200
+#Coke - Rs.60
+#Enter the number of coffee the customer bought: 4
+#Enter the number of vadais the customer bought: 2
+#Enter the number of sandwich the customer bought: 2
+#Enter the number of coke the customer bought: 3
+#Total cost of items : Rs. 944.0
+
+#no discount
+#Coffee - Rs.100 
+#Vadai - Rs. 100
+#Sandwich - Rs.200
+#Coke - Rs.60
+#Enter the number of coffee the customer bought: 0
+#Enter the number of vadais the customer bought: 0
+#Enter the number of sandwich the customer bought: 3 
+#Enter the number of coke the customer bought: 1
+#Total cost of items : Rs. 660
+
+#discount for above Rs.1000
+#Coffee - Rs.100 
+#Vadai - Rs. 100
+#Sandwich - Rs.200
+#Coke - Rs.60
+#Enter the number of coffee the customer bought: 5
+#Enter the number of vadais the customer bought: 7
+#Enter the number of sandwich the customer bought: 0
+#Enter the number of coke the customer bought: 1
+#Total cost of items : Rs. 1008.0
+
+#discount for coffee
+#Coffee - Rs.100 
+#Vadai - Rs. 100
+#Sandwich - Rs.200
+#Coke - Rs.60
+#Enter the number of coffee the customer bought: 2
+#Enter the number of vadais the customer bought: 3
+#Enter the number of sandwich the customer bought: 0
+#Enter the number of coke the customer bought: 0
+#Total cost of items : Rs. 400
