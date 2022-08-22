@@ -56,3 +56,25 @@ for day in range(len(days)):
             amount_earned = fruits_sold * price_of_fruits[fruit]
             sales[fruit] += amount_earned
             print("Sale in", fruits[fruit], " - Rs.", sales[fruit])
+
+
+
+# test case 1
+# Sale on monday: 
+# Sale in apple  - Rs. 1250
+# Sale in orange  - Rs. 750
+# Sale in lemon  - Rs. 100
+# Sale in mango  - Rs. 100
+# Sale in melon  - Rs. 100
+# Sale on tuesday: 
+# Sale in apple  - Rs. 1250
+# Sale in orange  - Rs. 180
+# Sale in lemon  - Rs. 300
+# Sale in mango  - Rs. 300
+# Sale in melon  - Rs. 300
+# Sale on wednesday: 
+# Sale in apple  - Rs. 0
+# Sale in orange  - Rs. 570
+# Sale in lemon  - Rs. 600
+# Sale in mango  - Rs. 600
+# Sale in melon  - Rs. 600
