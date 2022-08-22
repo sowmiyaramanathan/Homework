@@ -4,7 +4,7 @@ print("1. Chennai\n2. Trichy\n3. Madurai")          #printing the cities the cus
 city = input("Enter your city from one of the above : ")      #reading the city name as the price of onion varies from one city to another
 kg_of_onions = 0        #initializing total kg of onions to 0
 kg_of_tomatoes = 0      #initializing total kg of tomatoes to 0
-budget = budget - ((budget*3)/100)      #finding budget after 3% of the budget has been used up for petrol
+budget = budget - ((budget * 3)/100)      #finding budget after 3% of the budget has been used up for petrol
 
 if(budget == 0):        #using if to check whether the budget if 0
     print("You cannot buy vegetables")      #printing that customer cannot buy any vegetables
