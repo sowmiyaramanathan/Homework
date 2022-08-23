@@ -1,13 +1,12 @@
 number_in_numeric = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']      #initializing a list with numeric values of numbers
 number_in_english = ["Zero", "One", "Two", "Three", "Four","Five", "Six", "Seven", "Eight", "Nine"] #initializing a list with english names of numbers
+number = int(input("Enter a number : "))                                #reading a number from the user
+number_string = str(number)                             #converting the number into a string to iterate through it
 
-number = str(input("Enter a number : "))    #reading a number from the user in string type to iterate through it
-
-for num1 in range(0, len(number)):          #using for to iterate through the input to consider them individually
-    for num2 in range(len(number_in_numeric)):          #using for to iterate through the list numeric values
-        if(number[num1] == number_in_numeric[num2]):    #using if to check whether the char in input is same as the numeric value in the list
-            print(number_in_english[num2], end = '')    #printing the english name of the number in its corresponding position
-            break                                       #using break to come out of the inner loop as there is no need to compare with the rest of the items
+for num1 in range(len(number_string)):                              #using for to iterate through the input
+    if number_string[num1] in number_in_numeric:            #using if to check whether the single unit of the input is in the numeric list
+        index_position = number_in_numeric.index(number_string[num1])       #finding the index position of the numeric list
+        print(number_in_english[index_position], end = '')          #printing the number in words using the index position
 
 
 
@@ -21,11 +20,11 @@ for num1 in range(0, len(number)):          #using for to iterate through the in
 
 # test case 3
 # Enter a number : 000
-# ZeroZeroZero
+# Zero
 
 # test case 4
-# Enter a number : 234
-# TwoThreeFour
+# Enter a number : 257
+# TwoFiveSeven
 
 # test case 5
 # Enter a number : 10501
