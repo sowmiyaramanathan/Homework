@@ -1,17 +1,17 @@
-students = []
-sum_of_marks = 0
+students = []       #initializing a list to store the name of the students
+sum_of_marks = 0    #initializing sum of the marks as 0
 
-total_students = int(input("Enter total number of students : "))
-for student in range(total_students):
-    student_name = input("Enter student name : ")
-    students.append(student_name)
+total_students = int(input("Enter total number of students : "))    #reading total number of students
+for student in range(total_students):           #using for loop to get the name of the students
+    student_name = input("Enter student name : ")   #reading name from the user
+    students.append(student_name)                   #adding the name into the students list
 
-for student in range(total_students-1, -1, -1):
-    mark = int(input("Enter " + str(students[student]) + "'s mark in maths : "))
-    sum_of_marks += mark
+for student in range(total_students-1, -1, -1):     #using for to loop through the list in reverse order
+    mark = int(input("Enter " + str(students[student]) + "'s mark in maths : "))    #reading mark for the current student
+    sum_of_marks += mark               #calculating sum of marks by adding it with the mark of the current student
 
-average_of_the_class = sum_of_marks / total_students
-print("Average of the class : ", average_of_the_class)
+average_of_the_class = sum_of_marks / total_students        #calculating average of the class
+print("Average of the class : ", average_of_the_class)      #printing the average of the class
 
 
 
