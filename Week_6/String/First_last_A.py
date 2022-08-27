@@ -15,8 +15,12 @@ if(first_A_index == None):
 elif(last_A_index == None):
     print("There is only one A.")
 else:
-    for letter in range(first_A_index + 1, last_A_index):       #using for to print the letters between the first and last occurence of A
-        print(word[letter])                                     #printing the letters
+    if(first_A_index + 1 == last_A_index):
+        print("No letter between first and last A")
+    else:
+        print("Letter between first and last A")
+        for letter in range(first_A_index + 1, last_A_index):       #using for to print the letters between the first and last occurence of A
+            print(word[letter])                                     #printing the letters
 
 
 
@@ -33,6 +37,7 @@ else:
 # There is no A.
 
 # test case 4
+#Letter between first and last A
 # Enter a word : BANANA
 # N
 # A
