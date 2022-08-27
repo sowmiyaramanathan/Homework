@@ -8,19 +8,22 @@ word = [".com", ".edu", ".tech", ".org"]
 username = input("Enter the username : ")
 enter_password = False
 
-check_for_at = "@" in username
-if(check_for_at):
-    check = username[-4::+1]
-    if check in word:
-        if(username[-5] == "@"):
-            print("Invlaid username. '@' should be followed by characters.")
+if(username[0].isalpha()):
+    check_for_at = "@" in username
+    if(check_for_at):
+        check = username[-4::+1]
+        if check in word:
+            if(username[-5] == "@"):
+                print("Invlaid username. '@' should be followed by characters.")
+            else:
+                print("Username is correct")
+                enter_password = True
         else:
-            print("Username is correct")
-            enter_password = True
+            print("Invalid username. Read instructions and try again")
     else:
         print("Invalid username. Read instructions and try again")
 else:
-    print("Invalid username. Read instructions and try again")
+    print("Username should start with an alphabet")
 
 if enter_password == True:
     password = input("Enter your password : ")
@@ -105,4 +108,16 @@ Enter the username : Sowmiya@sayur.com
 Username is correct
 Enter your password : Swiyasay12s
 Invalid password. Read instructions and try again
+
+test case 5
+INSTRUCTIONS
+
+Username:
+1. Username should contain @
+2. Username should contain any one of the following: .com, .edu. .tech, or .org
+
+Password
+Password is the first, third and last three letters of your username followed by first three letters of the name of the company mentioned in the username and it should be followed by any three numbers
+Enter the username : @sayur.com
+Username should start with an alphabet
 """
