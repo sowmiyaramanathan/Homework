@@ -6,7 +6,9 @@ for student in range(total_students):           #using for loop to get the name 
     student_name = input("Enter student name : ")   #reading name from the user
     students.append(student_name)                   #adding the name into the students list
 
-for student in range(total_students-1, -1, -1):     #using for to loop through the list in reverse order
+students.reverse()
+
+for student in range(len(students)):     #using for to loop through the list in reverse order
     mark = int(input("Enter " + str(students[student]) + "'s mark in maths : "))    #reading mark for the current student
     sum_of_marks += mark               #calculating sum of marks by adding it with the mark of the current student
 
