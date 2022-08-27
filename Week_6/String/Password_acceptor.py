@@ -1,4 +1,3 @@
-from itertools import count
 import string
 password = input("Enter your password : ")
 weak = False
