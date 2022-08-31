@@ -1,7 +1,4 @@
-from re import L
-
-
-word = input("Enter a word : ")     #reading input
+word = input("Enter a word : ")                         #reading input
 letter1 = input("Enter a letter to be replaced : ")     #reading letter to be replaced
 letter2 = input("Enter a letter to replace : ")         #reading letter to replace
 
