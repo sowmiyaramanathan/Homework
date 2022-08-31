@@ -10,12 +10,12 @@ for letter in range(len(word)):     #using for to iterate through the input
     elif(word[letter] == "A"):      #using elif to check whether the cuurent element is A to find the last occurence of A
         last_A_index = letter           #assigning the index position needed to print the output as the current loop variable
 
-if(first_A_index == None):
+if(first_A_index == None):              #checking whether no starting index is found
     print("There is no A.")
-elif(last_A_index == None):
+elif(last_A_index == None):             #checking whether no ending index is found
     print("There is only one A.")
 else:
-    if(first_A_index + 1 == last_A_index):
+    if(first_A_index + 1 == last_A_index):    #checking whether the ending index is next to the starting index
         print("No letter between first and last A")
     else:
         print("Letter between first and last A")

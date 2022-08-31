@@ -1,28 +1,28 @@
 import string
-password = input("Enter your password : ")
-count_alpha = 0
-count_num = 0
-count_spec = 0
+password = input("Enter your password : ")      #reading input from the user
+count_alpha = 0                                 #initialzing a variable to store the count of alphabets
+count_num = 0                                   #initialzing a variable to store the count of numbers
+count_spec = 0                                 #initialzing a variable to store the count of special character
 
-if(password.isalpha() or password.isnumeric() or (all(i in string.punctuation for i in password))):
-    print("Password is weak. Not acceptable")
-else:
-    for char in password:
-        if char.isalpha():
-            count_alpha += 1
-        if char.isnumeric():
-            count_num += 1
-        if char in string.punctuation:
-             for char in password:
-                count_spec += 1
-    if(count_alpha >= 1 and count_num >= 1 and count_spec >= 1):
-        if(count_alpha >= 3 and count_num >= 2 and count_spec >= 1):
-            if(len(password) >= 16):
-                print("Very Strong. Password accepted")
+if(password.isalpha() or password.isnumeric() or (all(i in string.punctuation for i in password))): #checking whether the input contains only alphabets or numbers or special characters
+    print("Password is weak. Not acceptable")       #printing password is weak
+else:                               #using else to check further
+    for char in password:           #iterating through the input word
+        if char.isalpha():          #checking if the current character in the input is an alphabet
+            count_alpha += 1        #increasing the alphabet count by 1
+        if char.isnumeric():        #checking if the current character in the input is a number
+            count_num += 1          #increasing the number count by 1
+        if char in string.punctuation:  #checking if the current character in the input is a special character
+            count_spec += 1         #increasing the special character count by 1
+    if(count_alpha >= 1 and count_num >= 1 and count_spec >= 1):        #checking whether the count of all characters is atleast 1
+        if(count_alpha >= 3 and count_num >= 2 and count_spec >= 1):    #checking the count of characters
+            max_length = 16                 #initializing the maximum length of the password as 16
+            if(len(password) >= max_length):                             #checking the length of the word
+                print("Very Strong. Password accepted")         #printing password is very strong
             else:
-                print("Strong. Password accepted")
+                print("Strong. Password accepted")              #printing password is strong
         else:
-            print("OK. Password accepted")
+            print("OK. Password accepted")                      #printing password is ok
 
 
 
