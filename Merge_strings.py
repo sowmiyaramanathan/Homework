@@ -1,8 +1,9 @@
-firstWord = input("Enter first word : ")
-secondWord = input("Enter second word : ")
+firstWord = input("Enter first word : ")            #reading first word
+secondWord = input("Enter second word : ")          #reading second word
 
-mergedWord = firstWord + secondWord
+mergedWord = firstWord + secondWord                 #merging two words and storing it in a variable
 
+#printing the results
 print("Before merging")
 print("First word : ", firstWord)
 print("Second word : ", secondWord)
