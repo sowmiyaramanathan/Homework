@@ -15,4 +15,24 @@ for letter in range(len(word)-1, stop-1, -1):           #iterating the word till
             print(",", end = "")    #printing a comma as we cannot print the comma that is after this block i.e.., we are going to break the loop in this block
             print(word[start])                          #printing the single element that has been left
             break                                       #using break to stop the execution
-    print(",", end = "")
+    print(",", end = "")                                #printing a comma
+
+
+
+"""
+test case 1
+Enter a word : ABCD1234
+A4,B3,C2,D1
+
+test case 2
+Enter a word : abc12
+a2,b1,c
+
+test case 3
+Enter a word : mahesh2000
+m0,a0,h0,e2,sh
+
+test case 4
+Enter a word : apple23
+a3,p2,pe,l
+"""
