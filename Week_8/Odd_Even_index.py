@@ -11,3 +11,28 @@ if(len(word) % 2 == 0):             #checking whether the length of the word is 
 else:
     for letter in range(len(word)-1, -1, -2):       #iterating through the word by even index
         print(word[letter], end = "")               #printing the letter
+
+
+
+"""
+test case 1
+Enter a word : abcd
+Letter in odd index : 
+bd
+Letter in even index : 
+ca
+
+test case 2
+Enter a word : Apple
+Letter in odd index : 
+pl
+Letter in even index :
+epA
+
+test case 3
+Enter a word : Apple#Google
+Letter in odd index : 
+pl#oge
+Letter in even index :
+loGepA
+"""
