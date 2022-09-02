@@ -1,18 +1,18 @@
 word = input("Enter a word : ")     #reading input
 
-odd_index = []
-even_index = []
+odd_index = []                      #initializing a list to store elements in odd index
+even_index = []                     #initializing a list to store elements in even index
 
-for letter in range(0, len(word)):       #iterating through the word by odd index
-    if(letter%2 == 0):
-        even_index.insert(0, word[letter])
+for letter in range(0, len(word)):          #iterating through the word
+    if(letter%2 == 0):                      #checking whether the current index is even
+        even_index.insert(0, word[letter])      #adding the current element to even list
     else:
-        odd_index.append(word[letter])
+        odd_index.append(word[letter])          #in case of odd, adding the current element to odd list
 
 print("Letters in odd index : ")
-print(*odd_index, sep = "")
+print(*odd_index, sep = "")                     #printing elements in odd index
 print("Letters in even index : ")
-print(*even_index, sep = "")
+print(*even_index, sep = "")                    #printing elements in even index
 
 
 
