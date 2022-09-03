@@ -1,6 +1,3 @@
-from calendar import month
-
-
 months_per_year = 12    #initializing total months per year to get monthly sales and calculate monthly salary
 salary_per_month = []   #initializing a list to store salary for each month
 max_salary = 25000      #initializing maximum salary the salesman can earn
