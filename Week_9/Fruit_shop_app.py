@@ -2,7 +2,8 @@
 Your program will also find, if the customer already asked for the quantity of the fruit (one apple or 5 orange etc). Print the quantity if the customer says the quantity. If not, ask him how much he wants. You can limit the quantity to single digit number."""
 
 fruitsList = ["apple", "orange", "banana", "melon", "cherry"]       #initializing fruits list
-quantity = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"] #initializing quantity needed
+quantityWord = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"] #initializing quantity in english
+quantityNumeric = ['1', '2', '3', '4', '5', '6', '7', '8', '9']         #initializing quantity in numeric
 
 fruitNeed = None                #initializing fruits needed by customer as none
 quantityNeed = None             #initializing fruits needed by customer as none
@@ -19,7 +20,7 @@ while(customer == True):                        #customer is ready to order
     for response in range(len(customerResponse)):               #looping through the response list to find what the customer has ordered
         if customerResponse[response] in fruitsList:            #checking if the response has available fruit
             fruitNeed = customerResponse[response]
-        elif customerResponse[response] in quantity:            #checking if the response has quantity of fruit
+        elif customerResponse[response] in quantityWord or quantityNumeric:            #checking if the response has quantity of fruit
             quantityNeed = customerResponse[response]
     if(fruitNeed == None):                                      #checking whether the fruit is not available
         quantityNeed = None
@@ -53,8 +54,7 @@ Customer: one apple
 Customer ordered : 
 Fruit :  apple
 Quantity :  one
-_______________________________________________
-
+________________________________
 test case 2
 1 apple
 2 orange
@@ -70,8 +70,7 @@ Customer: One cherry
 Customer ordered : 
 Fruit :  cherry
 Quantity :  one
-_______________________________________________
-
+_________________________________
 test case 3
 1 apple
 2 orange
@@ -85,8 +84,7 @@ Customer: 23
 Customer ordered : 
 Fruit :  banana
 Quantity :  23
-________________________________________________
-
+__________________________________
 test case 4
 1 apple
 2 orange
@@ -100,8 +98,7 @@ Customer: No
 Customer ordered : 
 Fruit :  None
 Quantity :  None
-__________________________________________________
-
+__________________________________
 test case 5
 1 apple
 2 orange
@@ -113,4 +110,16 @@ Customer: I want two orange
 Customer ordered : 
 Fruit :  orange
 Quantity :  two
+__________________________________
+test case 6
+1 apple
+2 orange
+3 banana
+4 melon
+5 cherry
+Vendor: What do you want?
+Customer: 5 banana
+Customer ordered : 
+Fruit :  banana
+Quantity :  5
 """
