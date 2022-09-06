@@ -33,7 +33,7 @@ while(customer == True):                        #customer is ready to order
         
 if(fruitNeed != None and quantityNeed == None):     #checking whether the fruit is ordered and the quantity is not specified
     print("Vendor: How much of", fruitNeed, "do you want? ")    #asking for the quantity
-    quantityNeed = int(input("Customer: "))                         #reading the quantity
+    quantityNeed = (input("Customer: "))                         #reading the quantity
 
 #printing the order details
 print("Customer ordered : ")
