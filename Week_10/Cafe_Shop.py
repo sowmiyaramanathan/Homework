@@ -20,8 +20,8 @@ def sales():
         
         # restockMark = 0.2
         # for supplyIndex in range(len(supply)):
-        #     if(supply[supplyIndex] <= (supply[supplyIndex]*restockMark)):
-        #         supply[supplyIndex] += supply[supplyIndex] * restockMark
+        #     if(supply[supplyIndex] < ):
+        #         supply[supplyIndex] +=
         #         countRestock += 1
         #         print("Restocked")
         maxTransaction -= 1
