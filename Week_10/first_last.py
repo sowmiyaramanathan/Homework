@@ -1,49 +1,26 @@
-def betweenA(word):
-    first_A = -1
-    last_A = -1
-    first_A = word.find("A")
-    last_A = word.rfind("A")
-    if(first_A==-1 or first_A == last_A):
+def betweenLetters(word, letter):
+    firstLetter = -1
+    lastLetter = -1
+    foundLetter = False
+    firstLetter = word.find(letter)
+    lastLetter = word.rfind("A")
+    if(firstLetter ==-1 or firstLetter == lastLetter):
         print("There is no first A or last A")
-        betweenB(word)
-    elif(first_A == last_A-1):
+    elif(firstLetter == lastLetter-1):
         print("There is no letter between first and last A")
+        foundLetter = True
     else:
         print("Letters between first and last A")
-        for letter in range(first_A+1, last_A):
+        for letter in range(firstLetter+1, lastLetter):
             print(word[letter], end = " ")
+        foundLetter = True
+    return foundLetter
 
-def betweenB(word):
-    first_B = -1
-    last_B = -1
-    first_B = word.find("B")
-    last_B = word.rfind("B")
-    if(first_B==-1 or first_B == last_B):
-        print("There is no first B or last B")
-        betweenC(word)
-    elif(first_B == last_B-1):
-        print("There is no letter between first and last B")
-    else:
-        print("Letters between first and last B")
-        for letter in range(first_B+1, last_B):
-            print(word[letter], end = " ")
+inputWord = input("Enter a word : ")
+if(betweenLetters(inputWord, "A") == False):
+    if(betweenLetters(inputWord, "B") == False):
+        betweenLetters(inputWord, "C")
 
-def betweenC(word):
-    first_C = -1
-    last_C = -1
-    first_C = word.find("C")
-    last_C = word.rfind("C")
-    if(first_C==-1 or first_C == last_C):
-        print("There is no first C or last C")
-    elif(first_C == last_C-1):
-        print("There is no letter between first and last C")
-    else:
-        print("Letters between first and last C")
-        for letter in range(first_C+1, last_C):
-            print(word[letter], end = " ")
-
-word = input("Enter a word : ")
-betweenA(word)
 
 
 """

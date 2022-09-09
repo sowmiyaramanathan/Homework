@@ -1,3 +1,7 @@
+def printMenu(fruitsMenu):
+    for fruit in range(len(fruitsMenu)):
+        print(fruit + 1, fruitsMenu[fruit])
+
 def getOrder(fruits, quantity):
     customerChoice = True
     fruitsOrder = []
@@ -6,8 +10,7 @@ def getOrder(fruits, quantity):
     while(customerChoice != "That's all" and customerChoice != "No more"):
         fruitFound = 0
         quantityFound = 0
-        for fruit in range(len(fruits)):
-            print(fruit + 1, fruits[fruit])
+        printMenu(fruits)
         print("Vendor: What do you want to buy?" )
         customerOrder = input("Customer: ")
         customerOrder = customerOrder.lower().split()
@@ -37,16 +40,21 @@ def getOrder(fruits, quantity):
     orderItems = [list(item) for item in zip(fruitsOrder, quantityOrder)]
     return orderItems
 
+def printOrder(items):
+    if(len(items) == 0):
+        print("No orders taken")
+    else:
+        print("\nOrder Details: ")
+        for item in items:
+            print(item[0], ','.join(map(str, item[1:])))
+
 
 
 fruits = ["apple", "orange", "banana", "cherry"]
 quantity = [["one", "two", "three", "four", "five", "six", "seven", "eight", "nine"], ['1', '2', '3', '4', '5', '6', '7', '8', '9']]
 
 orderItems = getOrder(fruits, quantity)
-print("\nOrder Details: ")
-for item in orderItems:
-    print(item[0], ','.join(map(str, item[1:])))
-
+printOrder(orderItems)
 
 
 """
@@ -141,4 +149,40 @@ Order Details:
 apple 7
 banana 4
 cherry 3
+__________________________________________________________________________________________
+test case 3
+
+1 apple
+2 orange
+3 banana
+4 cherry
+Vendor: What do you want to buy?
+Customer: apple
+Vendor: How much apple do you want?
+Customer: 3
+Would you like to make another order? If not, 'Type 'That's all' or 'No more' ' : 
+Customer: yes
+1 apple
+2 orange
+3 banana
+4 cherry
+Vendor: What do you want to buy?
+Customer: banana
+Vendor: How much banana do you want?
+Customer: 2
+Would you like to make another order? If not, 'Type 'That's all' or 'No more' ' : 
+Customer: yes
+1 apple
+2 orange
+3 banana
+4 cherry
+Vendor: What do you want to buy?
+Customer: mango
+Enter valid fruit
+Would you like to make another order? If not, 'Type 'That's all' or 'No more' ' :
+Customer: That's all
+
+Order Details:
+apple 3
+banana 2
 """
