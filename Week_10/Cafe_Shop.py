@@ -6,7 +6,8 @@ def openShop():                                                         #funtion
     else:
         proceedRestock(originalSupply, currentSupply)                   #checking stock before taking orders
         displayMenu()                                                   #displaying menu
-        getOrder()                                                      #getting order
+        takeOrder = True                                                     #getting order
+    return takeOrder
 
 def proceedRestock(startingSupply, presentSupply):                      #function to check stock and restocking
     global restockCount
@@ -31,7 +32,6 @@ def getOrder():                                                         #functio
             todaySales[order] += noOfItem * itemsPrice[order]                       #calculating sales
         else:
             print("Out of stock")                                            #printing no stock in case of less supply
-    openShop()                                                         #calling openshop function to get next oreder
 
 def printTodayShopDetails():                                            #function to print sales details
     print("Today sales : ", sum(todaySales))                            #printing sales
@@ -47,13 +47,19 @@ noOfItemsSold = [0, 0, 0, 0]                              #initializing number o
 todaySales = [0, 0, 0, 0]                                 #initializing sales for the day
 restockCount = 0                                          #initializing restock count to keep track of restock
 
-openShop()                                                #calling openshop function to get orders
+openToOrder = openShop()                                                #calling openshop function to get orders
+while(openToOrder == True):
+    getOrder()
+    openShop()
 
 
 
 """
 test case 1
-Ready to take order or close shop? Yes for open /No for close: No 
+Ready to take order or close shop? Yes for open /No for close: No
+Today sales :  0
+No of items sold :  [0, 0, 0, 0]
+The supply has been restocked :  0 times
 __________________________________________
 test case 2
 Ready to take order or close shop? Yes for open /No for close: Yes
