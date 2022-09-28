@@ -1,0 +1,1 @@
+Hello. This is an input file to copy and write the contents in this file to another file.
