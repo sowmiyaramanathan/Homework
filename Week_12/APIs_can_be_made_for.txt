@@ -1,0 +1,12 @@
+Own use cases of API
+Name(possible name) - Use
+
+1. PredictPrice - an API that can prdict the price of agri products using with which the farmers can sell their products profitably
+
+2. CookYourWay - an API that will take the ingredients as input and will give what are all the dishes that can be made out of them
+
+3. FindHosp - an API that will display a list of hospitals that offer quality service with low cost by taking the service needed such as surgeries and therapies
+
+4. TagKey - an API that will take the domain or product name as input, and will return keywords that are popularly searched on the internet, related to the input. Using this, marketing and online advertising professionals can reach large number of audiences
+
+5. RightTool - an API that will list a number of tools available for business, professionals, students. For eg., If a student wants to learn web3, and he/she can use this API to get where to learn, tools and websites that teach web3. In case of professionals, they can get marketing tools, automation tools, design tools.
