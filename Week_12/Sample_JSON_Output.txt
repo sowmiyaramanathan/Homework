@@ -1,0 +1,55 @@
+1. PredictPrice:
+Crop name and current price is given as the input
+    {
+        name : "paddy"
+        current_price : "Rs.50"
+        price_estimated : "Rs.75"
+    }
+
+2. CookYourWay:
+Ingredients are given as the input
+    {
+        dish_name : "Chapati"
+    }
+    {
+        dish_name : "Poori"
+    }
+    {
+        dish_name : "Atta Dosa"
+    }
+    {
+        dish_name : "Roti"
+    }
+
+3. FindHosp:
+Service and region as the input
+    {
+        hospital_name : "Apollo"
+        cost : "50000"
+        place : "Madurai"
+    }
+    {
+        hospital_name : "Meenakshi Mission"
+        cost : "50000"
+        place : "Madurai"
+    }
+    {
+        hospital_name : "Aravind Hospital"
+        cost : "55000"
+        place : "Madurai"
+    }
+
+4. TagKey:
+Domain or product as the input
+    {
+        domain_name : "watch"
+        keywords : {"time", "leatherwatch", "workwear", "officewearwatch", "menswatch", "womenswatch", "metalwatch", "bluetoothwatch"}
+        strength : 75
+    }
+
+5. RightTool:
+Need is given as the input
+    {
+        Need : "Design_Tool"
+        Tools : {"Figma", "Dribble", "Sketch", "Adobe_Photoshop", "Adobe_XD", "Adobe_Illustrator", "InVision", "Canva"}
+    }
