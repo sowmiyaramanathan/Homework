@@ -5,6 +5,7 @@ Eg - https://archive.org/metadata/TheAdventuresOfTomSawyer_201303
 2. https://api.kickbox.com/v2/verify?email=kickbox%40example.com&apikey={{YOUR_API_KEY}} - used to verify a list of email addresses and allows us to incorporate the email verification into our application. It is used in registration, subscription forms and when the user types an invalid email or domain name, it prompts the user to enter a valid address.
 
 3. https://api.openaq.org/v2/cities - it provides historical and real time air quality data from various sources
+Eg - https://api.openaq.org/v2/countries/IN
 
 4. https://financialmodelingprep.com/api/v3/financial-statement-symbol-lists?apikey=YOUR_API_KEY - it provides real time stock price, financial statements, index prices, stock historical data, forex real time rate and cryptocurrencies.
 
