@@ -1,0 +1,6 @@
+Items,Price,Supply,Restock Percentage,Profit Margin,Availability,Outsourced
+Vadai,10,100,20,7,M/E,Yes
+Donut,40,50,5,25,E,Yes
+Coke,50,100,5,30,M/N/E,Yes
+Sandwich,25,75,10,12,M,Yes
+Samosa,10,100,20,5,M/E,Yes
