@@ -7,6 +7,6 @@ Eg - https://archive.org/metadata/TheAdventuresOfTomSawyer_201303
 3. https://api.openaq.org/v2/cities - it provides historical and real time air quality data from various sources
 Eg - https://api.openaq.org/v2/countries/IN
 
-4. https://financialmodelingprep.com/api/v3/financial-statement-symbol-lists?apikey=YOUR_API_KEY - it provides real time stock price, financial statements, index prices, stock historical data, forex real time rate and cryptocurrencies.
+4. https://www.billplz.com/api/v3/collections/{COLLECTION_ID} - it is used to send bills and collect payments
 
-5. https://www.billplz.com/api/v3/collections/{COLLECTION_ID} - it is used to send bills and collect payments
+5. https://fakerapi.it/api/v1/persons?_quantity=1&_gender=male&_birthday_start=2005-01-01 - used to get fake or dummy names, address, comapanies, places, books, etc., It is particularly useful when building and testing applications.
