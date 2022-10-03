@@ -1,21 +1,22 @@
-def getSubjectName():
-    for subject in range(totalSubjects):
-        subjectName = input("Enter " + str(subject+1) + " subject name : ")
-        subjectList.append(subjectName)
-    return subjectList
+def getSubjectName():                           #function to get subject name
+    for subject in range(totalSubjects):        #looping for the number of subjects
+        subjectName = input("Enter " + str(subject+1) + " subject name : ")     #reading subject names
+        subjectList.append(subjectName)                                         #adding suject name to list
+    return subjectList                                                          #returning the subject list
 
-def getMarks():
-    for subject in range(totalSubjects):
-        studentMarkList.append([])
-        for mark in range(numberOfStudents):
-            studentMark = int(input("Enter mark for student " + str(mark+1) + " in subject " + subjectList[subject] + " : "))
-            studentMarkList[subject].append(studentMark)
-    return studentMarkList
+def getMarks():                                 #function to get marks
+    for subject in range(totalSubjects):        #looping for number of subjects to get mark for all subjects
+        studentMarkList.append([])              #creating a list inside list to store marks for each subjects seperately
+        for mark in range(numberOfStudents):    #looping for the number of students to get marks for all students
+            studentMark = int(input("Enter mark for student " + str(mark+1) + " in subject " + subjectList[subject] + " : "))                               #reading mark
+            studentMarkList[subject].append(studentMark)            #adding mark to the sublist
+    return studentMarkList                      #returning mark list that contains sublist of subjects with marks
 
-def computeGrade():
-    for subject in range(totalSubjects):
-        studentGrade.append([])
-        for mark in range(numberOfStudents):
+def computeGrade():                             #function to calculate grade
+    for subject in range(totalSubjects):        #looping for number of subjects
+        studentGrade.append([])                 #creating a list inside list to store grades for each subjects seperately
+        for mark in range(numberOfStudents):    #looping for the number of students
+            #calcualting grade and appending it to the corresponding sublist
             if studentMarkList[subject][mark] <= 60:
                 studentGrade[subject].append("Fail")
             elif studentMarkList[subject][mark] >90:
@@ -26,38 +27,39 @@ def computeGrade():
                 studentGrade[subject].append("C")
             elif studentMarkList[subject][mark] > 60:
                 studentGrade[subject].append("D")
-    return studentGrade
+    return studentGrade                         #returning student grade list
 
-def computeAvergeOfClass():
-    for subject in range(totalSubjects):
-        classAverage.append([])
-        for mark in range(numberOfStudents):
-            sumOfMarks = sum(studentMarkList[subject])
-            averageOfTheClass = round(sumOfMarks / numberOfStudents)
-        classAverage[subject].append(subjectList[subject])
-        classAverage[subject].append(averageOfTheClass)
-    return classAverage
+def computeAvergeOfClass():                     #function to calculate average of class
+    for subject in range(totalSubjects):        #looping for the number of subjects
+        classAverage.append([])                 #creating a list inside list to store average of each subjects separately
+        for mark in range(numberOfStudents):    #looping for the number of students
+            sumOfMarks = sum(studentMarkList[subject])      #calculating sum of marks of one subject
+            averageOfTheClass = round(sumOfMarks / numberOfStudents)    #calculating average of that sum
+        classAverage[subject].append(subjectList[subject])              #adding subject into the sublist
+        classAverage[subject].append(averageOfTheClass)                 #adding corresponding average to the sublist
+    return classAverage                                                 #returning class average list
 
-totalSubjects = int(input("Enter total number of subjects : "))
-numberOfStudents = int(input("Enter the total number of students : "))
+totalSubjects = int(input("Enter total number of subjects : "))         #reading total number of subjects
+numberOfStudents = int(input("Enter the total number of students : "))  #reading number of students
+#initializing lists for : subject names, student marks, student grades, class average
 subjectList = []
 studentMarkList = []
 studentGrade = []
 classAverage = []
 
-subjectList = getSubjectName()
-studentMarkList = getMarks()
-studentGrade = computeGrade()
-classAverage = computeAvergeOfClass()
+subjectList = getSubjectName()          #calling getSubjectName() and getting the names of the subjects
+studentMarkList = getMarks()            #calling getMarks() and getting the marks of the students
+studentGrade = computeGrade()           #calling computeGrade() and getting the grades of the students
+classAverage = computeAvergeOfClass()   #calling computeAverageOfClass() and getting the average of the class
 
 print("Grade of students in each subject : ")
-for subject in range(totalSubjects):
-    print("Grade of each student in ", subjectList[subject])
-    print(*studentGrade[subject])
-    if subject+1 == totalSubjects:
-        print("Average of the class : ")
-        for averageMark in classAverage:
-            print(" ".join(map(str, averageMark)))
+for subject in range(totalSubjects):                            #looping for the number of subjects
+    print("Grade of each student in ", subjectList[subject])    #printing subject name
+    print(*studentGrade[subject])                     #printing the grade of students in the current subject in the loop
+    if subject+1 == totalSubjects:                              #when the last subject is reached
+        print("Average of the class : ")                        #printing the average of the class
+        for averageMark in classAverage:                        #looping the classAverage list
+            print(" ".join(map(str, averageMark)))              #printing the class average with subject name
 
 
 
