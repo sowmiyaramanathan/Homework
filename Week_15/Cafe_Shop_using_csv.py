@@ -1,29 +1,28 @@
-import csv
-import pandas as pd
+import csv                          #importing CSV to perform read and write on CSV files
+import pandas as pd                 #importing pandas with name as pd to write specific columns in a CSV
 
-def openShop():
-    shopStatus = input("Ready to take order or close the shop? Yes for open / No for close : ")
-    if(shopStatus == "No"):
-        exit()
-    else:
-        global noOrder
-        noOrder = False
-        takeOrder = True
-        return takeOrder
-def proceedRestock(orderedItems):
-    supplyIndex = 2
-    currentSupplyIndex = 3
-    limitToRestockIndex = 6
-    restockIndex = 0
-    for info in itemsInfoList:
-        info[currentSupplyIndex] -= orderedItems[restockIndex]
-        supplyLimitToMaintain = info[supplyIndex] * (info[limitToRestockIndex] / 100)
-        if info[currentSupplyIndex] <= supplyLimitToMaintain:
-            info[currentSupplyIndex] = info[supplyIndex] - info[currentSupplyIndex]
-            restockTimes[restockIndex] += 1
-            restockIndex += 1
+def openShop():                     #function to ask whether the shop is open to get orders
+    shopStatus = input("Ready to take order or close the shop? Yes for open / No for close : ") #reading input from attender
+    if(shopStatus == "No"):         #when response if no
+        exit()                      #closing the shop
+    else:                           #otherwise        
+        takeOrder = True            #variable to indicate that the shop is open to take orders
+        return takeOrder            #returning the takeOrder variable
 
-def readInputData():
+def proceedRestock(orderedItems):       #function to perform restocking
+    supplyIndex = 2                     #initializing the supply index
+    currentSupplyIndex = 3              #initializing the current supply index
+    limitToRestockIndex = 6             #initializing the restock limit index
+    restockIndex = 0                    #variable to track the restocking count for the items accordingly
+    for info in itemsInfoList:          #for loop to iterate all the items with their input data
+        info[currentSupplyIndex] -= orderedItems[restockIndex]     #updating the current supply after customer's order
+        supplyLimitToMaintain = info[supplyIndex] * (info[limitToRestockIndex] / 100)   #calculating the supply limit to maintain by referring the restock limit set in the input file
+        if info[currentSupplyIndex] <= supplyLimitToMaintain:       #when the current supply is or goes below the supply to maintain
+            info[currentSupplyIndex] = info[supplyIndex] - info[currentSupplyIndex] #increasing the current supply by the total number of items sold from the initial supply
+            restockTimes[restockIndex] += 1                 #increasing the restock count by 1
+            restockIndex += 1                               #increasing the tracking variable to track for the next item
+
+def readInputData():                            #function to read and store the input data locally in the application
     shopInputData = open(r"C:\Users\user\Desktop\Sayur Learning\Sowmiya\Week_15\input.csv", mode = "r")
     shopDataReader = csv.reader(shopInputData)
     next(shopDataReader)
@@ -50,6 +49,18 @@ def createShopOutputData(itemsList):
     shopOutputDataWriter.writerows(headerList)
     shopOutputData.close()
 
+def readShopData():
+    shopOutputData = open(r"C:\Users\user\Desktop\Sayur Learning\Sowmiya\Week_15\ouput.csv", mode = "r")
+    next(shopOutputData)
+    csvReader = csv.reader(shopOutputData)
+    for data in csvReader:
+        itemsSold.append(int(data[1]))
+        restockTimes.append(int(data[2]))
+        sales.append(int(data[3]))
+        profit.append(int(data[4]))
+        balanceStock.append(int(data[5]))
+    shopOutputData.close()
+
 def displayMenu(itemsList):
     menuItems = 1
     for item in itemsList:
@@ -71,18 +82,6 @@ def getOrder():
             orders.append(noOfItem)
     return orders
 
-def readShopData():
-    shopOutputData = open(r"C:\Users\user\Desktop\Sayur Learning\Sowmiya\Week_15\ouput.csv", mode = "r")
-    next(shopOutputData)
-    csvReader = csv.reader(shopOutputData)
-    for data in csvReader:
-        itemsSold.append(int(data[1]))
-        restockTimes.append(int(data[2]))
-        sales.append(int(data[3]))
-        profit.append(int(data[4]))
-        balanceStock.append(int(data[5]))
-    shopOutputData.close()
-
 def updateShopData(orderedItems):
     df = pd.read_csv(r"C:\Users\user\Desktop\Sayur Learning\Sowmiya\Week_15\ouput.csv")
     for i in range(len(orderedItems)):
@@ -99,9 +98,8 @@ def updateShopData(orderedItems):
     df["Profit"] = profit
     df["Balance stock"] = balanceStock
     df.to_csv(r"C:\Users\user\Desktop\Sayur Learning\Sowmiya\Week_15\ouput.csv", index = False)
-    print(df)
 
-noOrder = True
+firstOrder = True             #setting the firstOrder variable to true as the shop data files are prepared for the first time when the first customer arrives until then, the files are not accessed
 itemsInfoList = []
 itemsSold = []
 restockTimes = []
@@ -109,7 +107,7 @@ sales = []
 profit = []
 balanceStock = []
 openToOrder = openShop()
-if openToOrder == True and noOrder == False:
+if openToOrder == True and firstOrder == True:
     readInputData()
     createShopOutputData(itemsInfoList)
     readShopData()
@@ -118,6 +116,5 @@ while(openToOrder == True):
     displayMenu(itemsInfoList)
     itemsOrdered = getOrder()
     proceedRestock(itemsOrdered)
-    print(itemsSold, restockTimes, sales, profit, balanceStock)
     updateShopData(itemsOrdered)
     openShop()
