@@ -1,6 +1,6 @@
 Items,Items sold,Restock times,Sales,Profit,Balance stock
-Vadai,99,1,990,693,97
-Donut,46,1,1840,1150,44
-Coke,76,1,3800,2280,74
-Sandwich,71,1,1775,852,69
-Samosa,100,1,1000,500,98
+Vadai,15,0,150,105,85
+Donut,3,0,120,75,35
+Coke,7,0,350,210,85
+Sandwich,5,0,125,60,60
+Samosa,3,0,30,15,85
