@@ -24,7 +24,7 @@ def displayMenu():                                                      #functio
 
 def getOrder():                                                         #function to take orders
     for order in range(len(cafeItems)):
-        print("Attendent: How much of " + str(cafeItems[order]) + " do you want?")  #asking for orders to the customer
+        print("Attendent: How much of ", (cafeItems[order]), " do you want?")  #asking for orders to the customer
         noOfItem = int(input("Customer: "))                                         #reading order
         if(noOfItem <= currentSupply[order]):                                       #checking for the supply
             currentSupply[order] -= noOfItem                                        #decreasing current supply
