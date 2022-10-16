@@ -1,5 +1,4 @@
 import random
-from numpy import size
 
 def generateWord(size):
     generatedWord = random.choice(open(r"C:\Users\user\Desktop\Sayur Learning\Sowmiya\Week_15\WordleInput.txt").read().split())
