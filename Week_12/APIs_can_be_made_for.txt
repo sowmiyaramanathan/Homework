@@ -1,7 +1,7 @@
 Own use cases of API
 Name(possible name) - Use
 
-1. PredictPrice - an API that can prdict the price of agri products using with which the farmers can sell their products profitably
+1. PredictPrice - an API that can predict the price of agri products using with which the farmers can sell their products profitably
 
 2. CookYourWay - an API that will take the ingredients as input and will give what are all the dishes that can be made out of them
 

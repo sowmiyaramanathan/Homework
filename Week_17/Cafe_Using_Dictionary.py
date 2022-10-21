@@ -20,6 +20,7 @@ openToOrder = 'yes'
 
 for item in itemsData.keys():
     print(item, " - Rs.", itemsData[item]["Price"])
+    
 while maxTransaction > 0 and openToOrder == "yes":
     for item in itemsData.keys():
         noOfItem = int(input("How much " + item + " do you want? "))
@@ -33,8 +34,6 @@ while maxTransaction > 0 and openToOrder == "yes":
 
 for item in itemsData.keys():
     print("Sales in ", item, " - ", itemsData[item]["Sales"])
-
-
 
 """
 test case 1

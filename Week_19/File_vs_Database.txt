@@ -1,0 +1,28 @@
+Using File:
+    It manages the storage and retrieval of data
+    It is a part of an OS
+    Advantages:
+        It is less complex
+        It is less expensive
+        No need to write queries
+    Disadvantages:
+        Data redundancy is present
+        No backups
+        Less security
+        Data inconsistency is high
+    Example: NTFS, FAT
+
+Using Databased:
+    It allows to create, updata, access and manage Databases
+    It is not a part of an OS
+    Advantages:
+        No data redundancy
+        Strong backups and recovery of data
+        No data inconsistency
+        Secured
+        Retrieve data based on certain conditions
+    Disadvantages:
+        More complex
+        Expensive
+        Write queries to manage data
+    Example: Oracle, MySql, MS Sql, SQL

@@ -1,0 +1,9 @@
+Python:
+    Python has to start to run queries
+    It has to load the program
+    Python needs to connect to the database
+
+Workbench:
+    Workbench has already in the state of running
+    Workbench does not need to load the program
+    It already has the connection to the database

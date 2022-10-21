@@ -1,5 +1,5 @@
-1. Data structure is group of elements that hare used to organise, process, and retrieve data in an efficent manner.
+1. Data structure is a group of elements that are used to organise, process, and retrieve data in an efficent manner.
 2. It is of two types: linear(array, stack, queue, linked list) and non-linear(trees, graphs).
 3. We can perform lot of useful operations on DS such as traversing, insertion, deletion, updation, sorting, etc.,
-4. DS helps to use access data and use the memory of the computer efficently.
+4. DS helps to access data and use the memory of the computer efficently.
 5. Python has two types of DS: built-in(list, dictionary, tuple, set) and user-defined(stack, queue, tree, linked list, graph, hasmap)

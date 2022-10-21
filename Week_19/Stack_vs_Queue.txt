@@ -1,0 +1,41 @@
+Stack:
+    1. It is a linear data structure which follows the LIFO or FILO mechanism.
+    2. Here, the insertion and deletion happens at one end i.e., at the top of the stack or the value that top pointer is pointing out.
+    3. The process of adding and removing elements in a stcak is called as Push and Pop.
+    4. Operations:
+        push() - inserting an element. Full stack - overflow
+        pop() - deleting an element. Empty stack - underflow
+        isEmpty() - to check whether the stack is empty
+        isFull() - to check whether the stack is full
+        peek() - return value at the given index
+        count() - return total number of elements
+        display() - displays all elements in the stack
+        change() - changes the element in the particular index
+    5. Applications:
+        Backtracking
+        Memory management
+        UNDO/REDO Operations
+        Balancing symbols
+        String reversing
+        Recursion
+
+Queue:
+    1. It ia linear data structure which follows thw FIFO mechanism.
+    2. Here, the insertion and deletion happens at two ends i.e., the insertion happens at the end of the queue called rear(tail) and the deletion happens at the start of the queue called front(head).
+    3. The process of adding and removing elements in a queue is called as Enqueue and Dequeue.
+    4. Operations:
+        front() - return the element at the front without deleting it
+        rear() - return the element at the rear without deleting it
+        isFull() - to check whether the queue is full
+        isEmpty() - to check whether the queue is empty
+        Enqueue() - to add an element to the queue. Full queue - overflow
+        Dequeue() - to delete an element from the queue. Empty queue - underflow
+    5. Applications:
+        Used in devices such as router/switch
+        Printers
+    6. Types:
+        Input restricted queue - input taken in one end; deletion in both ends
+        Output restricted queue - input taken in both ends; deleting in one end
+        Circular queue - rear end is connected with the front end or vice versa. Follows the same FIFO order
+        Double ended queue - insertion and deleting can be done in both ends
+        Priority queue - elements are accessed based on priority assigned to them
