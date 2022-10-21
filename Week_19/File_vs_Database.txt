@@ -12,7 +12,7 @@ Using File:
         Data inconsistency is high
     Example: NTFS, FAT
 
-Using Databased:
+Using Database:
     It allows to create, updata, access and manage Databases
     It is not a part of an OS
     Advantages:
