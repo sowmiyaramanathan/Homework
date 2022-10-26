@@ -73,13 +73,13 @@ def declareResults(playerDetails):                              # function to de
         print("Player 1 has scored : ", playerOnePoint)                  # printing player 2's points
         if playerOnePoint == 5:                                          # when player 1 has scored 5 points
             tkinter.messagebox.showinfo("Game Over", "Player 1 has won") # printing player 1 has won
-            exit()                                                       # game ends
+            return True                                                  # returning true when player 1 has won
     if playerDetails[0] == "P2":
         playerTwoPoint += playerDetails[1]                               # increasing player 2's points
         print("Player 2 has scored : ", playerTwoPoint)                  # printing player 2's points
         if playerTwoPoint == 5:                                          # when player 2 has scored 5 points
             tkinter.messagebox.showinfo("Game Over", "Player 2 has won") # printing player 1 has won
-            exit()                                                       # game ends
+            return True                                                  # returning true when player 2 has won
 
 print("\t\t\tGAME ROLLS")
 createBoard()                                       # calling createBoard() to create a board
@@ -87,7 +87,8 @@ while True:                                         # players start to play the 
     playerName = choosePlayer(playTurn)         # calling choosePlayer() to get who is playing now
     diceNumber = rollDice(playerName)     # calling the rollDice() to roll the dice and storing the value in diceNumber
     playerDetails = checkSpots(diceNumber, playerName, opponentPlayer) # calling the checkSpots() to check spots
-    declareResults(playerDetails)           # calling declareResults() to find whether the either one has scored five points
+    if declareResults(playerDetails):           # calling declareResults() to find whether the either one of the players has won the game
+        exit()                                  # when won game ends
     playTurn += 1                             # increasing player turns to let the other player play the game
 
 
