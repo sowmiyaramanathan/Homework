@@ -5,7 +5,7 @@ even_index = []
 print("\nLetters in even index : ")
 for letter in range(0, len(word)):       #iterating through the word by odd index
     if(letter%2 == 0):
-        even_index.insert(0, word[letter])
+        even_index.insert(word[letter])
     else:
         odd_index.append(word[letter])
 
