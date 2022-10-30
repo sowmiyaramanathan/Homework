@@ -19,11 +19,9 @@ def findElementsInCommon(listOne, listTwo):
         else:
             if num1 in listTwo:
                 commonElements.append(num1)
-    print(commonElements)
-
 
 listSize = getListSize()
 numbersListOne = getElements(listSize, numbersListOne, "1")
 numbersListTwo = getElements(listSize, numbersListTwo, "2")
-findElementsInCommon(numbersListOne, numbersListTwo)
+findElementsInCommon([1,2,3], [2,3,4])
 print(commonElements)

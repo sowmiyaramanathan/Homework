@@ -1,21 +1,21 @@
 import re
 
-def askUser():
+def askUser():                                      # method to ask the user for choice
     print("Select\n1 to Encode a message\n2 to Decode a message")
     userChoice = int(input("Enter your choice : "))
     return userChoice
 
-def getMessage():
+def getMessage():                                   # method to get message to encode it
     userInputMessage = input("Enter message to encode : ")
     toEncode = userInputMessage.split(' ')
     return toEncode
 
-def getCode():
+def getCode():                                      # method to get code to decode it
     userInputCode = input("Enter code to decode")
     toDecode = userInputCode.split(' ')
     return toDecode
 
-def checkMessage(message):
+def checkMessage(message):                          # method to check the message pattern to encode it
     checkForNumber = r"[0-9]"
     for char in message:
         if char[len(char) - 1] in vowels:
@@ -25,7 +25,7 @@ def checkMessage(message):
         else:
             normalWord(char)
 
-def vowelInLast(message):
+def vowelInLast(message):                          # method to encode a message that contains a vowel at the end
     codedMessage = ""
     firstLetterInCodedMessage = message[-1]
     message = message.replace(firstLetterInCodedMessage, ' ')
@@ -33,13 +33,13 @@ def vowelInLast(message):
     codedMessage += message
     print(codedMessage, end = " ")
 
-def numberInFirst(message):
+def numberInFirst(message):                         # method to encode a message that is a number
     codedMessage = ""
     messageTransformation = numbers[message]
     codedMessage += "A" + messageTransformation + "A"
     print(codedMessage, end = " ")
 
-def normalWord(message):
+def normalWord(message):              # method a encode a message that is not a number and ends with a consonant
     codedMessage = ""
     messageSize = len(message) // 2
     if messageSize % 2 == 0:
