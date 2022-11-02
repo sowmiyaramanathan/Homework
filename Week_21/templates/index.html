@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+    <title>Fun Time</title>
+    <style>
+        h3{
+            color: blueviolet;
+            font-family: 'Lucida Sans';
+            font-style: oblique;
+            text-align: center;
+        }
+        label{
+            font-size: large;
+            color: brown;
+            font-style: inherit;
+        }
+        button{
+            color: white;
+            background-color: blue;
+            border-color: blue;
+            border-radius: 10cm;
+        }
+    </style>
+    <script src = "https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnAdd").click(function(e){
+                var numOne = $("#inpFirstNum").val();
+                var numTwo = $("#inpSecondNum").val();
+                var durl = 'http://127.0.0.1:5000/add/' + numOne + '/' + numTwo;
+                $.ajax({
+                    url : durl,
+                    success:function(r){
+                        $("#lblResult").text(r);
+                    },
+                    error:function(r){
+                        $("#lblResult").text("Invalid");
+                    }
+                });
+            });
+        });
+        $(document).ready(function(){
+            $("#btnSub").click(function(e){
+                var numOne = $("#inpFirstNum").val();
+                var numTwo = $("#inpSecondNum").val();
+                var durl = 'http://127.0.0.1:5000/add/' + numOne + '/' + numTwo;
+                $.ajax({
+                    url : durl,
+                    success:function(r){
+                        $("#lblResult").text(r);
+                    },
+                    error:function(r){
+                        $("#lblResult").text("Invalid");
+                    }
+                });
+            });
+        });
+        $(document).ready(function(){
+            $("#btnMul").click(function(e){
+                var numOne = $("#inpFirstNum").val();
+                var numTwo = $("#inpSecondNum").val();
+                var durl = 'http://127.0.0.1:5000/add/' + numOne + '/' + numTwo;
+                $.ajax({
+                    url : durl,
+                    success:function(r){
+                        $("#lblResult").text(r);
+                    },
+                    error:function(r){
+                        $("#lblResult").text("Invalid");
+                    }
+                });
+            });
+        });
+        $(document).ready(function(){
+            $("#btnDiv").click(function(e){
+                var numOne = $("#inpFirstNum").val();
+                var numTwo = $("#inpSecondNum").val();
+                var durl = 'http://127.0.0.1:5000/add/' + numOne + '/' + numTwo;
+                $.ajax({
+                    url : durl,
+                    success:function(r){
+                        $("#lblResult").text(r);
+                    },
+                    error:function(r){
+                        $("#lblResult").text("Invalid");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h3>lET'S dO sOME cALCULATIONS</h3>
+    <br/><br/><br/>
+    <p style="text-align: center;">
+        <label>Enter a number : </label>
+        <input id = "inpFirstNum", type="text"></input>
+        <br/></br>
+        <label>Enter a number : </label>
+        <input id = "inpSecondNum", type="text"></input>
+        <br/><br/>
+        <button id = "btnAdd">Add</button> &nbsp; <button id = "btnSub">Sub</button> &nbsp; <button id = "btnMul">Multiply</button> &nbsp; <button id = "idDiv">Divide</button>
+        <br/></br>
+        <label>Result : </label>
+        <label id = "lblResult"></label>
+    </p>
+</body>

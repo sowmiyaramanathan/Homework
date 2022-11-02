@@ -1,7 +1,13 @@
 import re
 
+vowels = ['a', 'e', 'i', 'o', 'u']
+numbers = { '0' : 'one', '1' : 'one', '2':'two', '3' : 'three', '4' : 'four', '5' : 'five', '6' : 'six', '7' : 'seven', '8' : 'eight', '9' : 'nine', '10' : 'ten', '11' : 'eleven', '12' : 'twelve'}
+codedMessage = []
+codedPatternTrack = []
+decodedCode = []
+
 def askUser():                                      # method to ask the user for choice
-    print("Select\n1 to Encode a message\n2 to Decode a message")
+    print("Select\nPress 1 to Encode a message\nPress 2 to Decode a message")
     userChoice = int(input("Enter your choice : "))
     return userChoice
 
@@ -11,7 +17,7 @@ def getMessage():                                   # method to get message to e
     return toEncode
 
 def getCode():                                      # method to get code to decode it
-    userInputCode = input("Enter code to decode")
+    userInputCode = input("Enter code to decode : ")
     toDecode = userInputCode.split(' ')
     return toDecode
 
@@ -19,60 +25,99 @@ def checkMessage(message):                          # method to check the messag
     checkForNumber = r"[0-9]"
     for char in message:
         if char[len(char) - 1] in vowels:
-            vowelInLast(char)
+            codedPatternTrack.append(vowelInLast(char))
         elif re.search(checkForNumber, char):
-            numberInFirst(char)
+            codedPatternTrack.append(numberInFirst(char))
         else:
-            normalWord(char)
+            codedPatternTrack.append(normalWord(char))
 
-def vowelInLast(message):                          # method to encode a message that contains a vowel at the end
-    codedMessage = ""
-    firstLetterInCodedMessage = message[-1]
-    message = message.replace(firstLetterInCodedMessage, ' ')
-    codedMessage += firstLetterInCodedMessage
-    codedMessage += message
-    print(codedMessage, end = " ")
+def vowelInLast(message):                 # method to encode a message that contains a vowel at the end
+    encodedMessage = ""
+    firstLetterInCodedMessage = message[len(message) - 1]
+    encodedMessage += firstLetterInCodedMessage + message[0 : len(message) - 1]
+    codedMessage.append(encodedMessage)
+    return 'vowelPattern'
 
-def numberInFirst(message):                         # method to encode a message that is a number
-    codedMessage = ""
+def numberInFirst(message):                # method to encode a message that is a number
+    encodedMessage = ""
     messageTransformation = numbers[message]
-    codedMessage += "A" + messageTransformation + "A"
-    print(codedMessage, end = " ")
+    encodedMessage += "A" + messageTransformation + "A"
+    codedMessage.append(encodedMessage)
+    return 'numberPattern'
 
-def normalWord(message):              # method a encode a message that is not a number and ends with a consonant
-    codedMessage = ""
+def normalWord(message):          # method a encode a message that is not a number and ends with a consonant
+    encodedMessage = ""
     messageSize = len(message) // 2
-    if messageSize % 2 == 0:
+    if len(message) % 2 != 0:
         firstHalfPattern = message[messageSize + 1  : ]
         secondHalfPattern = message[ : messageSize]
         middlePattern = message[messageSize]
-        codedMessage += firstHalfPattern + middlePattern + secondHalfPattern
+        encodedMessage += firstHalfPattern + middlePattern + secondHalfPattern
     else:
         firstHalfPattern = message[messageSize : ]
         secondHalfPattern = message[ : messageSize]
-        codedMessage += firstHalfPattern + secondHalfPattern
-    print(codedMessage, end = " ")
+        encodedMessage += firstHalfPattern + secondHalfPattern
+    codedMessage.append(encodedMessage)
+    return 'normalPattern'
 
+def checkCode(code):
+    for char in range(len(code)):
+        if codedPatternTrack[char] == 'vowelPattern':
+            vowelInFirst(code[char])
+        elif codedPatternTrack[char] == 'numberPattern':
+            aInFirst(code[char])
+        elif codedPatternTrack[char] == 'normalPattern':
+            normalCode(code[char])
 
-vowels = ['a', 'e', 'i', 'o', 'u']
-numbers = { '0' : 'one', '1' : 'one', '2':'two', '3' : 'three', '4' : 'four', '5' : 'five', '6' : 'six', '7' : 'seven', '8' : 'eight', '9' : 'nine', '10' : 'ten', '11' : 'eleven', '12' : 'twelve'}
+def vowelInFirst(code):
+    deCodedMessage = ""
+    lastLetterInDecodedMessage = code[:1]
+    deCodedMessage += code[1 :] + lastLetterInDecodedMessage
+    decodedCode.append(deCodedMessage)
+
+def aInFirst(code):
+    transformedCode = code[1 : len(code) - 1]
+    deCodedMessage = { val for val in numbers if numbers[val] == transformedCode}
+    deCodedMessage = ''.join(deCodedMessage)
+    decodedCode.append(deCodedMessage)
+
+def normalCode(code):
+    deCodedMessage = ""
+    codeSize = len(code) // 2
+    if len(code) % 2 != 0:
+        firstHalfPattern = code[codeSize + 1 : ]
+        secondHalfPattern = code[: codeSize]
+        middlePattern = code[codeSize]
+        deCodedMessage += firstHalfPattern + middlePattern + secondHalfPattern
+    else:
+        firstHalfPattern = code[codeSize : ]
+        secondHalfPattern = code[ : codeSize]
+        deCodedMessage += firstHalfPattern + secondHalfPattern
+    decodedCode.append(deCodedMessage)
+
 userChoice = askUser()
 if userChoice == 1:
     userMessage = getMessage()
     checkMessage(userMessage)
+    print("Encoded Message : ", *codedMessage)
+userChoice = askUser()
 if userChoice == 2:
     userCode = getCode()
-    # checkCode(userCode)
+    checkCode(userCode)
+    print("Decoded Message : ", *decodedCode)
 
 
 
 """
-test case 1 - Encoding a message
 Select
-1 to Encode a message
-2 to Decode a message
-Enter your choice : 1
-Enter message to encode : meet me at the river at 7 pm today
-teme em  ta eth  ervri ta AsevenA mp aydto 
-
+Press 1 to Encode a message
+Press 2 to Decode a messageEnter your choice : 1
+Enter message to encode : meet me at the river at 7 pm today  
+Encoded Message : etme em ta eth ervri ta AsevenA mp aydto
+Select
+Press 1 to Encode a message
+Press 2 to Decode a message
+Enter your choice : 2
+Enter code to decode : etme em ta eth ervri ta AsevenA mp aydto
+Decoded Message : meet me at the river at 7 pm today
 """
