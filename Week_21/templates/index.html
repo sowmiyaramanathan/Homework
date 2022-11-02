@@ -20,7 +20,7 @@
             border-radius: 10cm;
         }
     </style>
-    <script src = "https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script>
         $(document).ready(function(){
             $("#btnAdd").click(function(e){
@@ -42,7 +42,7 @@
             $("#btnSub").click(function(e){
                 var numOne = $("#inpFirstNum").val();
                 var numTwo = $("#inpSecondNum").val();
-                var durl = 'http://127.0.0.1:5000/add/' + numOne + '/' + numTwo;
+                var durl = 'http://127.0.0.1:5000/sub/' + numOne + '/' + numTwo;
                 $.ajax({
                     url : durl,
                     success:function(r){
@@ -58,7 +58,7 @@
             $("#btnMul").click(function(e){
                 var numOne = $("#inpFirstNum").val();
                 var numTwo = $("#inpSecondNum").val();
-                var durl = 'http://127.0.0.1:5000/add/' + numOne + '/' + numTwo;
+                var durl = 'http://127.0.0.1:5000/mul/' + numOne + '/' + numTwo;
                 $.ajax({
                     url : durl,
                     success:function(r){
@@ -74,7 +74,7 @@
             $("#btnDiv").click(function(e){
                 var numOne = $("#inpFirstNum").val();
                 var numTwo = $("#inpSecondNum").val();
-                var durl = 'http://127.0.0.1:5000/add/' + numOne + '/' + numTwo;
+                var durl = 'http://127.0.0.1:5000/div/' + numOne + '/' + numTwo;
                 $.ajax({
                     url : durl,
                     success:function(r){
@@ -99,7 +99,7 @@
         <label>Enter a number : </label>
         <input id = "inpSecondNum", type="text"></input>
         <br/><br/>
-        <button id = "btnAdd">Add</button> &nbsp; <button id = "btnSub">Sub</button> &nbsp; <button id = "btnMul">Multiply</button> &nbsp; <button id = "idDiv">Divide</button>
+        <button id = "btnAdd">Add</button> &nbsp; <button id = "btnSub">Sub</button> &nbsp; <button id = "btnMul">Multiply</button> &nbsp; <button id = "btnDiv">Divide</button>
         <br/></br>
         <label>Result : </label>
         <label id = "lblResult"></label>
