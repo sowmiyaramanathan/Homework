@@ -78,7 +78,7 @@
                 $.ajax({
                     url : durl,
                     success:function(r){
-                        $("#lblResult").text("Division is : " + r);
+                        $("#lblResult").text("Division is " + r);
                     },
                     error:function(r){
                         $("#lblResult").text("Invalid");
@@ -94,10 +94,10 @@
     <br/><br/><br/>
     <p style="text-align: center;">
         <label>Enter a number : </label>
-        <input id = "inpFirstNum", type="number", min="0.01", oninput="validity.valid||(value = ' ');"></input>
+        <input id = "inpFirstNum", type="number", min="0", oninput="validity.valid||(value = ' ');"></input>
         <br/></br>
         <label>Enter a number : </label>
-        <input id = "inpSecondNum", type="number", min="0.01", oninput="validity.valid||(value = ' ');"></input>
+        <input id = "inpSecondNum", type="number", min="0", oninput="validity.valid||(value = ' ');"></input>
         <br/><br/>
         <button id = "btnAdd">Add</button> &nbsp; <button id = "btnSub">Sub</button> &nbsp; <button id = "btnMul">Multiply</button> &nbsp; <button id = "btnDiv">Divide</button>
         <br/></br>

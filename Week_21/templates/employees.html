@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person Details</title>
+    <style>
+        h2{
+            color: steelblue;
+            font-family: 'Segoe UI';
+            font-size: large;
+            text-align: center;
+        }
+        button{
+            color: white;
+            background-color: brown;
+            border-color: brown;
+            border-radius: 10cm;
+        }
+    </style>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnGreet").click(function(e){
+                var personUrl = "http://127.0.0.1:5000/personDetails"
+                $.ajax({
+                    url : personUrl,
+                    success:function(personDetails){
+                        var names = ""
+                        for(var index in personDetails){
+                            names = names + 'Hi ' + personDetails[index].Salutation
+                            names = names + ' ' + personDetails[index].Name + ' '
+                        }
+                        $("#lblGreet").text(names)
+                    },
+                    error:function(message){
+                        $('#lblGreet').text(message.responseText)
+                    }
+                })
+            })
+            $("#btnName").click(function(e){
+                var personUrl = "http://127.0.0.1:5000/personDetails"
+                $.ajax({
+                    url : personUrl,
+                    success:function(personDetails){
+                        var names = ""
+                        for(var index in personDetails){
+                            names = names + 'Person name is ' + personDetails[index].Name + ' '
+                        }
+                        $("#lblName").text(names)
+                    },
+                    error:function(message){
+                        $('#lblName').text(message.responseText)
+                    }
+                })
+            })
+            $("#btnOccupation").click(function(e){
+                var personUrl = "http://127.0.0.1:5000/personDetails"
+                $.ajax({
+                    url : personUrl,
+                    success:function(personDetails){
+                        var names = ""
+                        for(var index in personDetails){
+                            names = names + personDetails[index].Name + 's occupation is ' + personDetails[index].Occupation + ' '
+                        }
+                        $("#lblOccupation").text(names)
+                    },
+                    error:function(message){
+                        $('#lblOccupation').text(message.responseText)
+                    }
+                })
+            })
+            $("#btnPhoneNumber").click(function(e){
+                var personUrl = "http://127.0.0.1:5000/personDetails"
+                $.ajax({
+                    url : personUrl,
+                    success:function(personDetails){
+                        var names = ""
+                        for(var index in personDetails){
+                            names = names + personDetails[index].Name + 's phone number is ' + personDetails[index].Phonenumber + ' '
+                        }
+                        $("#lblPhoneNumber").text(names)
+                    },
+                    error:function(message){
+                        $('#lblPhoneNumber').text(message.responseText)
+                    }
+                })
+            })
+            $("#btnGetAll").click(function(e){
+                var personUrl = "http://127.0.0.1:5000/personDetails"
+                $.ajax({
+                    url : personUrl,
+                    success:function(personDetails){
+                        var names = ""
+                        for(var index in personDetails){
+                            names = names + 'Hi ' + personDetails[index].Salutation + ' ' + personDetails[index].Name + '. Your occupation is ' + personDetails[index].Occupation + '. Your phone number is ' + personDetails[index].Phonenumber + ' '
+                        }
+                        $("#lblGetAll").text(names)
+                    },
+                    error:function(message){
+                        $('#lblGetAll').text(message.responseText)
+                    }
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <h2>Get Details of the persons</h2>
+    <p style = "text-align: center;">
+        <button id = "btnGreet">Greet the person</button> </br> <label id = "lblGreet"></label> </br></br></br></br>
+        <button id = "btnName">Get person Name</button> </br> <label id = "lblName"></label> </br></br></br></br>
+        <button id = "btnOccupation">Get person Occupation</button> </br> <label id = "lblOccupation"></label> </br></br></br></br>
+        <button id = "btnPhoneNumber">Get person Phone Number</button> </br> <label id = "lblPhoneNumber"></label> </br></br></br></br>
+        <button id = "btnGetAll">Get all person Details</button> </br> <label id = "lblGetAll"></label>
+    </p>
+</body>
+</html>

@@ -23,13 +23,13 @@ def getCode():                                      # method to get code to deco
 
 def checkMessage(message):                          # method to check the message pattern to encode it
     checkForNumber = r"[0-9]"
-    for char in message:
-        if char[len(char) - 1] in vowels:
-            codedPatternTrack.append(vowelInLast(char))
-        elif re.search(checkForNumber, char):
-            codedPatternTrack.append(numberInFirst(char))
+    for word in message:
+        if word[len(word) - 1] in vowels:
+            codedPatternTrack.append(vowelInLast(word))
+        elif re.search(checkForNumber, word):
+            codedPatternTrack.append(numberInFirst(word))
         else:
-            codedPatternTrack.append(normalWord(char))
+            codedPatternTrack.append(normalWord(word))
 
 def vowelInLast(message):                 # method to encode a message that contains a vowel at the end
     encodedMessage = ""
@@ -61,13 +61,13 @@ def normalWord(message):          # method a encode a message that is not a numb
     return 'normalPattern'
 
 def checkCode(code):
-    for char in range(len(code)):
-        if codedPatternTrack[char] == 'vowelPattern':
-            vowelInFirst(code[char])
-        elif codedPatternTrack[char] == 'numberPattern':
-            aInFirst(code[char])
-        elif codedPatternTrack[char] == 'normalPattern':
-            normalCode(code[char])
+    for word in range(len(code)):
+        if codedPatternTrack[word] == 'vowelPattern':
+            vowelInFirst(code[word])
+        elif codedPatternTrack[word] == 'numberPattern':
+            aInFirst(code[word])
+        elif codedPatternTrack[word] == 'normalPattern':
+            normalCode(code[word])
 
 def vowelInFirst(code):
     deCodedMessage = ""
