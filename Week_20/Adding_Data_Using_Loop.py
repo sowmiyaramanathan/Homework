@@ -1,8 +1,6 @@
 from configparser import ConfigParser
 import mysql.connector as msconnector
 from faker import Faker
-from collections import defaultdict
-import pandas as pd
 
 config = ConfigParser()
 config.read("C:\\Users\\user\Desktop\Sayur Learning\Sowmiya\Week_20\\connection.ini")
@@ -23,10 +21,10 @@ row= {}
 n = 0
 cursor = mydatabase.cursor(buffered=True)
 
-while n >= 100:
+while n <= 100:
     n += 1
     row = [fake.first_name(), fake.last_name(), fake.city(), fake.state(), fake.phone_number()]
     mycursor.execute('INSERT INTO `tblpersons` (personFirstName, personLastName, personCity, personState, personPhNo) VALUES ("%s", "%s", "%s", "%s", "%s");' %(row[0], row[1], row[2], row[3], row[4]))
-    if n % 100 == 0:
-        print("iteration is ", n)
-        mydatabase.commit()
+
+print("iteration is ", n - 1)
+mydatabase.commit()
