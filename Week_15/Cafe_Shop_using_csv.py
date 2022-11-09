@@ -12,15 +12,15 @@ def openShop():                     #function to ask whether the shop is open to
 def proceedRestock(orderedItems):       #function to perform restocking
     supplyIndex = 2                     #initializing the supply index
     currentSupplyIndex = 3              #initializing the current supply index
-    limitToRestockIndex = 6             #initializing the restock limit index
-    restockIndex = 0                    #variable to track the restocking count for the items accordingly
+    limitToRestockIndex = 5             #initializing the restock limit index
+    itemIndex = 0                    #variable to track the restocking count for the items accordingly
     for info in itemsInfoList:          #for loop to iterate all the items with their input data
-        info[currentSupplyIndex] -= orderedItems[restockIndex]     #updating the current supply after customer's order
+        info[currentSupplyIndex] -= orderedItems[itemIndex]     #updating the current supply after customer's order
         supplyLimitToMaintain = info[supplyIndex] * (info[limitToRestockIndex] / 100)   #calculating the supply limit to maintain by referring the restock limit set in the input file
         if info[currentSupplyIndex] <= supplyLimitToMaintain:       #when the current supply is or goes below the supply to maintain
             info[currentSupplyIndex] = info[supplyIndex] - info[currentSupplyIndex] #increasing the current supply by the total number of items sold from the initial supply
-            restockTimes[restockIndex] += 1                 #increasing the restock count by 1
-            restockIndex += 1                               #increasing the tracking variable to track for the next item
+            restockTimes[itemIndex] += 1                 #increasing the restock count by 1
+        itemIndex += 1                               #increasing the tracking variable to track for the next item
 
 def readInputData():                            #function to read and store the input data locally in the application
     shopInputData = open(r"C:\Users\user\Desktop\Sayur Learning\Sowmiya\Week_15\input.csv", mode = "r") #opening the input file in read mode
@@ -85,7 +85,7 @@ def getOrder():                                         #function to get orders 
 def updateShopOutputData(orderedItems):                                       #function to update the outpu file
     outpuFile = pd.read_csv(r"C:\Users\user\Desktop\Sayur Learning\Sowmiya\Week_15\ouput.csv") #opening the output file as a dataframe using pandas
     for item in range(len(orderedItems)):                               #for loop to go throgh the ordered items
-        itemsSold[item] += + orderedItems[item]          #adding the number of items ordered on a particular item to the value in the itemsSold list
+        itemsSold[item] += orderedItems[item]          #adding the number of items ordered on a particular item to the value in the itemsSold list
         tempSale = orderedItems[item] * itemsInfoList[item][1]          #calculating the amount earned on an item for an order and storing it in a temporary sales variable
         sales[item] = sales[item] + tempSale                            #adding the sales variable to the value in the sales list
         tempProfit = orderedItems[item] * itemsInfoList[item][6]        #calculaing the profit earned on an item by refering the profit margin and storing it in a temporary profit variable
