@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Colej Pazar</title>
+        <style>
+            h2{
+                color: rgb(245, 251, 252);
+            }
+            button{
+                height: 1cm;
+                width: max-content;
+                color: #ffffff;
+                font: optional;
+                font-size: medium;
+                font-family: 'Lucida Sans';
+                background-color: rgb(14, 14, 216);
+                border-radius: 10%;
+                border-color: rgb(14, 14, 216);
+            }
+        </style>
+        <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#btnAdd").click(function(e){
+                    $.ajax({
+                        success:function(r){
+                            window.location.href = 'http://127.0.0.1:5000/addproducts' 
+                        },
+                        error:function(r){
+                            $("#lblMessage").text("Error Occured");
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body style="text-align: center; background-color: blueviolet;" >
+        <h2>Welcome to "KOLEJ BAZAR"</h2> </br></br></br>
+        <button id = "btnAdd">Add Products</button> </br></br></br>
+        <button id = "btnView">View Products</button>
+
+        <label id = "lblMessage"></label>
+    </body>
+</html>

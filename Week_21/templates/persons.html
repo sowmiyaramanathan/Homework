@@ -29,8 +29,7 @@
                     success:function(personDetails){
                         var names = ""
                         for(var index in personDetails){
-                            names = names + 'Hi ' + personDetails[index].Salutation
-                            names = names + ' ' + personDetails[index].Name + ' '
+                            names = names + 'Hi ' + personDetails[index].Salutation + ' ' + personDetails[index].Name + ' '
                         }
                         $("#lblGreet").text(names)
                     },
@@ -62,7 +61,7 @@
                     success:function(personDetails){
                         var names = ""
                         for(var index in personDetails){
-                            names = names + personDetails[index].Name + 's occupation is ' + personDetails[index].Occupation + ' '
+                            names = names + personDetails[index].Name + "'s occupation is " + personDetails[index].Occupation + ' '
                         }
                         $("#lblOccupation").text(names)
                     },
@@ -78,7 +77,7 @@
                     success:function(personDetails){
                         var names = ""
                         for(var index in personDetails){
-                            names = names + personDetails[index].Name + 's phone number is ' + personDetails[index].Phonenumber + ' '
+                            names = names + personDetails[index].Name + "'s phone number is " + personDetails[index].Phonenumber + ' '
                         }
                         $("#lblPhoneNumber").text(names)
                     },

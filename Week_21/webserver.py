@@ -37,7 +37,7 @@ def cub(numOne):
 
 @app.route('/person')
 def person():
-    return render_template('employees.html')
+    return render_template('persons.html')
 
 @app.route('/personDetails')
 def personDetails():

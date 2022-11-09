@@ -25,9 +25,9 @@
         $(document).ready(function(){
             $("#btnSqr").click(function(e){
                 var numOne = $("#inpFirstNum").val();
-                var durl = 'http://127.0.0.1:5000/sqr/' + numOne;
+                var sqrurl = 'http://127.0.0.1:5000/sqr/' + numOne;
                 $.ajax({
-                    url : durl,
+                    url : sqrurl,
                     success:function(r){
                         $("#lblResult").text("Square is " + r);
                     },
@@ -40,9 +40,9 @@
         $(document).ready(function(){
             $("#btnCube").click(function(e){
                 var numOne = $("#inpFirstNum").val();
-                var durl = 'http://127.0.0.1:5000/cub/' + numOne;
+                var cuburl = 'http://127.0.0.1:5000/cub/' + numOne;
                 $.ajax({
-                    url : durl,
+                    url : cuburl,
                     success:function(r){
                         $("#lblResult").text("Cube is " + r);
                     },

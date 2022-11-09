@@ -26,9 +26,9 @@
             $("#btnAdd").click(function(e){
                 var numOne = $("#inpFirstNum").val();
                 var numTwo = $("#inpSecondNum").val();
-                var durl = 'http://127.0.0.1:5000/add/' + numOne + '/' + numTwo;
+                var addurl = 'http://127.0.0.1:5000/add/' + numOne + '/' + numTwo;
                 $.ajax({
-                    url : durl,
+                    url : addurl,
                     success:function(r){
                         $("#lblResult").text("Addition is : " + r);
                     },
@@ -42,9 +42,9 @@
             $("#btnSub").click(function(e){
                 var numOne = $("#inpFirstNum").val();
                 var numTwo = $("#inpSecondNum").val();
-                var durl = 'http://127.0.0.1:5000/sub/' + numOne + '/' + numTwo;
+                var suburl = 'http://127.0.0.1:5000/sub/' + numOne + '/' + numTwo;
                 $.ajax({
-                    url : durl,
+                    url : suburl,
                     success:function(r){
                         $("#lblResult").text("Difference is : " + r);
                     },
@@ -58,9 +58,9 @@
             $("#btnMul").click(function(e){
                 var numOne = $("#inpFirstNum").val();
                 var numTwo = $("#inpSecondNum").val();
-                var durl = 'http://127.0.0.1:5000/mul/' + numOne + '/' + numTwo;
+                var mulurl = 'http://127.0.0.1:5000/mul/' + numOne + '/' + numTwo;
                 $.ajax({
-                    url : durl,
+                    url : mulurl,
                     success:function(r){
                         $("#lblResult").text("Multiplication is : " + r);
                     },
@@ -74,9 +74,9 @@
             $("#btnDiv").click(function(e){
                 var numOne = $("#inpFirstNum").val();
                 var numTwo = $("#inpSecondNum").val();
-                var durl = 'http://127.0.0.1:5000/div/' + numOne + '/' + numTwo;
+                var divurl = 'http://127.0.0.1:5000/div/' + numOne + '/' + numTwo;
                 $.ajax({
-                    url : durl,
+                    url : divurl,
                     success:function(r){
                         $("#lblResult").text("Division is " + r);
                     },
