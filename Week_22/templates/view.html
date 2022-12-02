@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <title>View Products</title>
+    <style>
+        button{
+                height: 1cm;
+                width: max-content;
+                color: #ffffff;
+                font: optional;
+                font-size: medium;
+                font-family: 'Lucida Sans';
+                background-color: rgb(14, 14, 216);
+                border-radius: 10%;
+                border-color: rgb(14, 14, 216);
+            }
+    </style>
+    <script src = "https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnView").click(function(e){
+                var viewUrl = "http://127.0.0.1:5000/view"
+                $.ajax({
+                    url : viewUrl,
+                    success: function(result){
+                        for(var index in result){
+                            document
+                        }
+                        $("#lblView").text(result);
+                    },
+                    error: function(){
+                        $("#lblView").text("Error occured");
+                    }
+                })
+            })
+        })
+    </script>
+    <body>
+        <button id = "btnView">View All Products</button> <br/><br/>
+        <label id = "lblView"></label>
+    </body>
+</html>

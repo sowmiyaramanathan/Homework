@@ -32,6 +32,19 @@
                     });
                 });
             });
+
+            $(document).ready(function(){
+                $("#btnView").click(function(e){
+                    $.ajax({
+                        success:function(r){
+                            window.location.href = 'http://127.0.0.1:5000/viewproducts' 
+                        },
+                        error:function(r){
+                            $("#lblMessage").text("Error Occured");
+                        }
+                    });
+                });
+            });
         </script>
     </head>
     <body style="text-align: center; background-color: blueviolet;" >
