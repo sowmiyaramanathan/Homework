@@ -1,0 +1,80 @@
+body{
+  background-color:burlywood;
+}
+h2, h3 {
+  color:#8527d3e0;
+  text-align: center;
+  margin-top: 100px;
+}
+h4 {
+  color: #4b56d2;
+  text-align: center;
+  margin-left: 64px;
+}
+.btnContainer {
+  margin-top: 100px;
+  text-align: center;
+}
+.button1 {
+  color: #7b0ad8e0;
+  background-color: white;
+  border-radius: 8px;
+  width: 20%;
+  height: 70px;
+  border: none;
+  font-family: "Montserrat", sans-serif, monospace;
+  font-size: large;
+  font-weight: 700;
+}
+.button1:hover {
+  background-color: #7b0ad8e0;
+  box-shadow: inset;
+  color: white;
+}
+.navBar {
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+.navBar li {
+  display: inline-block;
+}
+.navBar a {
+  background-color: burlywood;
+  color: #7b0ad8e0;
+  padding: 16px;
+  margin-right: 8px;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 21px;
+  font-family:"Montserrat", "Lucida Sans", sans-serif, monospace;
+}
+.navBar a:hover {
+  background: #7d1ecaef;
+  color: white;
+  box-shadow: inset;
+}
+.searchBarContainer {
+  text-align: center;
+  margin-top: 50px;
+}
+.searchBarContainer input {
+  padding: 16px 16px;
+  height: 8px;
+  width: 400px;
+  color: #7b0ad8e0;
+  font-weight: 300;
+  font-size: medium;
+  font-family:"Montserrat", sans-serif, monospace;
+  border-radius: 13px;
+  margin: 8px;
+  border-width: 0px;
+}
+input[type="text"]:focus {
+  border-color: #7b0ad8e0;
+  outline: none;
+  box-shadow: 0 0 5px #7b0ad8e0;
+}
