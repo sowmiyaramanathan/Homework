@@ -1,16 +1,109 @@
-body{
-  background-color:burlywood;
+/* mainpage - index.html */
+body {
+  background-color: #fde88b;
+  font-family: "Lucida Sans", "Montserrat", sans-serif, monospace;
 }
-h2, h3 {
-  color:#8527d3e0;
+#video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 40%;
+}
+.welcomeText .text {
+  color: #7b0ad8e0;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 96px;
+  margin-bottom: auto;
+  font-size: 96px;
 }
-h4 {
-  color: #4b56d2;
+.welcomeText .desc {
+  color: #7b0ad8e0;
+  margin-left: 500px;
+}
+b {
+  color: #7b0ad8e0;
+}
+.welcomeNote {
+  margin-top: 48px;
+  width: auto;
   text-align: center;
-  margin-left: 64px;
+  color: #000000;
+  font-size: large;
 }
+.procedure {
+  color: whitesmoke;
+  margin-left: 70px;
+  font-size: 70px;
+  margin-top: 64px;
+}
+.steps .header {
+  font-weight: 100px;
+  font-size: larger;
+  color: rgb(26, 131, 131);
+  margin-left: 20px;
+}
+.steps .content {
+  font-weight: bolder;
+  font-size: medium;
+  color: rgba(11, 43, 185, 0.788);
+  margin-left: 70px;
+}
+.steps .note {
+  color: #000000;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.userSteps {
+  width: 100%;
+  height: 400px;
+  display: flex;
+}
+.buyer {
+  width: 50%;
+  float: left;
+}
+.verticalline {
+  border-left: 1px solid rgba(11, 43, 185, 0.788);
+  height: 400px;
+  position: absolute;
+  margin-left: -3px;
+  left: 50%;
+}
+.seller {
+  float: right;
+  width: 50%;
+}
+h3 {
+  text-align: center;
+  text-transform: capitalize;
+  text-decoration: wavy;
+}
+.getstartedContainer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.getstarted {
+  text-align: center;
+  background-color: burlywood;
+  color: #7b0ad8e0;
+  padding: 16px;
+  width: fit-content;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 21px;
+  font-family: "Montserrat", "Lucida Sans", sans-serif, monospace;
+}
+.getstarted:hover {
+  background: #7d1ecaef;
+  color: white;
+  box-shadow: inset;
+}
+/* login page */
 .btnContainer {
   margin-top: 100px;
   text-align: center;
@@ -31,6 +124,8 @@ h4 {
   box-shadow: inset;
   color: white;
 }
+
+/* homepage for buyer */
 .navBar {
   padding: 8px;
   display: flex;
@@ -45,18 +140,20 @@ h4 {
   background-color: burlywood;
   color: #7b0ad8e0;
   padding: 16px;
-  margin-right: 8px;
+  margin-right: 48px;
   text-decoration: none;
   font-weight: bolder;
   font-size: large;
   border-radius: 21px;
-  font-family:"Montserrat", "Lucida Sans", sans-serif, monospace;
+  font-family: "Montserrat", "Lucida Sans", sans-serif, monospace;
 }
 .navBar a:hover {
   background: #7d1ecaef;
   color: white;
   box-shadow: inset;
 }
+
+/* explore page of buyer */
 .searchBarContainer {
   text-align: center;
   margin-top: 50px;
@@ -68,7 +165,7 @@ h4 {
   color: #7b0ad8e0;
   font-weight: 300;
   font-size: medium;
-  font-family:"Montserrat", sans-serif, monospace;
+  font-family: "Montserrat", sans-serif, monospace;
   border-radius: 13px;
   margin: 8px;
   border-width: 0px;
