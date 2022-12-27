@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import "../styles/styles.css";
+import "../../styles/styles.css";
 
 export default function SelectYearOfStudy() {
   const years = [

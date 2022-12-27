@@ -24,7 +24,7 @@ body {
 }
 .desc {
   color: #7b0ad8e0;
-  margin-left: 500px;
+  text-align: center;
 }
 b {
   color: #7b0ad8e0;
@@ -42,42 +42,39 @@ b {
   font-size: 70px;
   margin-top: 64px;
 }
-.steps .header {
+.header {
   font-weight: 100px;
   font-size: larger;
   color: rgb(26, 131, 131);
   margin-left: 20px;
 }
-.steps .content {
+.content {
   font-weight: bolder;
   font-size: medium;
   color: rgba(11, 43, 185, 0.788);
   margin-left: 70px;
 }
-.steps .note {
+.note {
   color: #000000;
   font-weight: bold;
   margin-left: 10px;
 }
 .userSteps {
   width: 100%;
-  height: 400px;
   display: flex;
 }
 .buyer {
-  width: 50%;
-  float: left;
+  flex: 1;
 }
 .verticalline {
   border-left: 1px solid rgba(11, 43, 185, 0.788);
-  height: 400px;
-  position: absolute;
-  margin-left: -3px;
+  height: auto;
+  position: sticky;
+  margin: 8px;
   left: 50%;
 }
 .seller {
-  float: right;
-  width: 50%;
+  flex: 1;
 }
 h3 {
   text-align: center;
@@ -85,7 +82,7 @@ h3 {
   text-decoration: wavy;
 }
 .getstartedContainer {
-  margin-top: 10px;
+  margin: 10px;
   display: flex;
   justify-content: center;
 }
@@ -117,6 +114,9 @@ h3 {
   display: flex;
   justify-content: center;
 }
+.formContainer.signup {
+  height: 600px;
+}
 .form-body {
   padding: 20px 10px;
   font-size: large;
@@ -134,15 +134,14 @@ h3 {
   width: 50%;
   margin: 8px;
 }
-.form_input, .selector {
+.form_input {
   width: 70%;
   border-radius: 8px;
   height: 30px;
   border-style: none;
   padding-left: 5px;
-
 }
-input:focus {
+input:focus, select:focus {
   border-color: #7b0ad8e0;
   outline: none;
   box-shadow: 0 0 5px #7b0ad8e0;
@@ -161,7 +160,7 @@ input:focus {
   font-family: "Montserrat", sans-serif, monospace;
   font-size: large;
   font-weight: 700;
-  margin-right: 8px;
+  margin: 8px;
 }
 .button:hover {
   background-color: #7b0ad8e0;

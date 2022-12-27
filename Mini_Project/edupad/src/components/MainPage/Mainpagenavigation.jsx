@@ -1,7 +1,6 @@
 import React from "react";
-import '../styles/styles.css';
-import '../pages/LoginPage'
-
+import "../../styles/styles.css";
+import '../../pages/LoginPage';
 
 function Mainpagenavigation() {
   return (

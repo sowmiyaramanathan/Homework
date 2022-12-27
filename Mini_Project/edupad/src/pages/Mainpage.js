@@ -1,7 +1,7 @@
 import React from "react";
-import BackgroundVideo from "../components/BackgroundVideo";
-import MainPageContents from "../components/MainPageContents";
-import Mainpagenavigation from "../components/Mainpagenavigation";
+import BackgroundVideo from "../components/MainPage/BackgroundVideo";
+import MainPageContents from "../components/MainPage/MainPageContents";
+import Mainpagenavigation from "../components/MainPage/Mainpagenavigation";
 
 function Mainpage() {
     return (

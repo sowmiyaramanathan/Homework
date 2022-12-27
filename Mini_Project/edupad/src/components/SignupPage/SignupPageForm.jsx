@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles/styles.css";
+import "../../styles/styles.css";
 import SelectYearOfStudy from "./SelectYearOfStudy";
 
 export default function SignupPageForm() {
   return (
-    <div className="formContainer">
+    <div className="formContainer signup">
       <div className="form-body">
         <div className="field userName">
           <label className="form_label">Name</label>
