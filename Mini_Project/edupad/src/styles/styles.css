@@ -1,7 +1,10 @@
 /* mainpage - index.html */
+* {
+  font-family: "Montserrat", "Lucida Sans", sans-serif, monospace;
+}
 body {
   background-color: #fde88b;
-  font-family: "Lucida Sans", "Montserrat", sans-serif, monospace;
+  font-family: "Montserrat", "Lucida Sans", sans-serif, monospace;
 }
 .video {
   position: fixed;
@@ -12,14 +15,14 @@ body {
   z-index: -1;
   opacity: 40%;
 }
-.welcomeText .text {
+.text {
   color: #7b0ad8e0;
   text-align: center;
   margin-top: 96px;
   margin-bottom: auto;
   font-size: 96px;
 }
-.welcomeText .desc {
+.desc {
   color: #7b0ad8e0;
   margin-left: 500px;
 }
@@ -96,34 +99,75 @@ h3 {
   font-weight: bolder;
   font-size: large;
   border-radius: 21px;
-  font-family: "Montserrat", "Lucida Sans", sans-serif, monospace;
 }
 .getstarted:hover {
   background: #7d1ecaef;
   color: white;
   box-shadow: inset;
 }
-/* login page 
-.btnContainer {
-  margin-top: 100px;
+
+/* login page */
+.signin {
   text-align: center;
+  color: rgba(11, 43, 185, 0.788);
+  margin-top: 32px;
 }
-.button1 {
+.formContainer {
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}
+.form-body {
+  padding: 20px 10px;
+  font-size: large;
+  width: 500px;
+  height: 200px;
+}
+.userName,
+.userPassword,
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.form_label {
+  width: 50%;
+  margin: 8px;
+}
+.form_input, .selector {
+  width: 70%;
+  border-radius: 8px;
+  height: 30px;
+  border-style: none;
+  padding-left: 5px;
+
+}
+input:focus {
+  border-color: #7b0ad8e0;
+  outline: none;
+  box-shadow: 0 0 5px #7b0ad8e0;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.button {
   color: #7b0ad8e0;
+  height: 40px;
   background-color: white;
   border-radius: 8px;
-  width: 20%;
-  height: 70px;
   border: none;
   font-family: "Montserrat", sans-serif, monospace;
   font-size: large;
   font-weight: 700;
+  margin-right: 8px;
 }
-.button1:hover {
+.button:hover {
   background-color: #7b0ad8e0;
   box-shadow: inset;
   color: white;
-} */
+}
 
 /* homepage for buyer */
 .navBar {

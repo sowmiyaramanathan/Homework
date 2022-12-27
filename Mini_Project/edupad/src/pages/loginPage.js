@@ -1,9 +1,10 @@
 import React from "react";
+import LoginPageContents from "../components/LoginPageContents";
 
-function Sample () {
+export default function LoginPage () {
     return (
-        <h1>Welcome</h1>
+        <div>
+            <LoginPageContents />
+        </div>
     )
 }
-
-export default Sample;
