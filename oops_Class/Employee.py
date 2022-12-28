@@ -59,3 +59,33 @@ for employee in employees:
 
 if flag is not None:
     print("Wrong employee ID entered")
+
+
+
+"""
+test case 1
+Enter employee ID : 5
+Sam's ID is 5
+Sam has no manager
+____________________________________
+
+test case 2
+Enter employee ID : 6
+Lisa's ID is 6
+Lisa's manager is Sam
+Sam has no manager
+____________________________________
+
+test case 3
+Enter employee ID : 11
+Wrong employee ID entered
+____________________________________
+
+test case 4
+Enter employee ID : 4
+Steve's ID is 4
+Steve's manager is Olivia
+Olivia's manager is Harry
+Harry's manager is Peter
+Peter has no manager
+"""
