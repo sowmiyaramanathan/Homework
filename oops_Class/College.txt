@@ -1,0 +1,37 @@
+class College():
+    int noOfStaff, noOfStudents
+    String collegeName
+    Department[] collegeDepartments
+    Student[] studentDetails
+
+    def addNewStudent(Student newStudent):
+        self.studentDetails.append(newStudent)
+        self.noOfStudents += 1
+
+    def addNewDept(Department newDept):
+        self.collegeDepartments.append(newDept)
+
+class Department():
+    int noOfStaff
+    int noOfStudents
+    int noOfSection
+
+class Student():
+    String name
+    String rollNumber
+    String regNumber
+    String department
+    int year
+
+sethu = new College()
+
+csbs = new Department()
+
+sam100 = new Student()
+sam100.name = 'Sam'
+sam100.rollNumber = '100'
+sam100.regNumber = '12345SU'
+sam100.department = 'CSBS'
+
+sethu.addNewDept(csbs)
+sethu.addNewStudent(sam100)
