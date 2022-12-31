@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react'
+import axios from 'axios';
 
 function App() {
 
@@ -14,9 +15,9 @@ function App() {
     .then((response) => {
       const res = response.data
       setData(({
-        data: data.Name
+        data: res.Name
       }))
-      console.log(data)
+      console.log(data.data)
     }).catch((error) => {
       if(error.response) {
         console.log(error.response)
@@ -24,6 +25,26 @@ function App() {
     })
   }, [])
 
+  const [ name, setName ] = useState([{}])
+
+  function onClick () {
+    axios({
+      method: "GET",
+      url: '/data'
+    })
+    .then((response) => {
+      const res = response.data
+      setName(({
+        name: res.Name
+      }))
+      console.log(name)
+    }).catch((error) => {
+      if(error.response) {
+        console.log(error.response)
+      }
+    })
+  }
+  
   return (
     <div className="App">
       <header className="App-header">
@@ -39,6 +60,8 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={onClick}>Click here</button>
+        <p>{name.name}</p>
       </header>
     </div>
   );
