@@ -3,7 +3,7 @@ from configparser import ConfigParser
 import mysql.connector as msconnector
 
 config = ConfigParser()
-config.read("C:\\Users\\user\\Desktop\\Sayur Learning\\Sowmiya\\Mini_Project\\myproject\\backend\\connection.ini")
+config.read("C:\\Users\\user\\Desktop\\Sayur Learning\\Sowmiya\\Mini_Project\\myproject\\backend\\temp\\connection.ini")
 config_data  = config["credentials"]
 try:
     mydatabase = msconnector.connect(
