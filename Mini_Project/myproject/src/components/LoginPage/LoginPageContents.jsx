@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/styles.css";
+import axios from 'axios';
 
 function LoginPageContents() {
   return (
@@ -15,6 +16,26 @@ function LoginPageContents() {
 }
 
 function LoginPageForm() {
+
+  const [ name, setName ] = useState([{}])
+
+  function onClick () {
+    axios({
+      method: "GET",
+      url: '/data'
+    })
+    .then((response) => {
+      const res = response.data
+      setName(({
+        name: res.Name
+      }))
+      console.log(name)
+    }).catch((error) => {
+      if(error.response) {
+        console.log(error.response)
+      }
+    })
+  }
   return (
     <div className="formContainer">
       <div className="form-body">
@@ -37,7 +58,7 @@ function LoginPageForm() {
           ></input>
         </div>
         <div className="buttonContainer">
-          <button className="button">
+          <button className="button" onClick={onClick}>
             Log In
           </button>
           <nbsp></nbsp>

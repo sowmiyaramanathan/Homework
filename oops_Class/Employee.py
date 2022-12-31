@@ -6,11 +6,12 @@ class Employee():
         self.empManager = None
 
     def getManagerHierarchy(self):
-        while self.empManager is not None:
-            print(self.empName + "'s manager is " + self.empManager.empName)
-            self = self.empManager
+        empObj = self
+        while empObj.empManager is not None:
+            print(empObj.empName + "'s manager is " + empObj.empManager.empName)
+            empObj = empObj.empManager
         else:
-            print(self.empName + " has no manager")
+            print(empObj.empName + " has no manager")
 
 peter = Employee()
 peter.empName = 'Peter'
