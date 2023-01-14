@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function MainPage () {
+function MainPage (props) {
     return (
         <div>
             <p>New User</p>

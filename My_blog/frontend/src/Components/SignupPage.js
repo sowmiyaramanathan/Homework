@@ -9,15 +9,15 @@ function SigupPage() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
     control,
   } = useForm();
 
   function onSubmitSignup (details) {
-    console.log(details)
     axios({
       method: 'post',
-      url: '/signupdetails',
+      url: '/registeruser',
       data: {
         name: details.name,
         userName: details.userName,
@@ -26,12 +26,13 @@ function SigupPage() {
         phoneNumber: details.phoneNumber
       }
     }).then((response) => {
-      alert(`Signed up successfully. Go back and login to continue`)
+      alert(`${response.message}`)
     }).catch((error) => {
       if(error.response) {
-        alert(error.response.status)
+        alert(error.response.message)
       }
     })
+    reset()
   }
 
   return (

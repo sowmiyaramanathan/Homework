@@ -1,36 +1,204 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
-from passlib.hash import sha256_crypt
-from configparser import ConfigParser
-# import mysql.connector as msconnector
+from models import User, Post
+import jwt, os
+from auth_middleware import token_required
+from dotenv import load_dotenv
+from datetime import datetime
 
-# config = ConfigParser()
-# config.read("C:\\Users\\user\\Desktop\\Sayur Learning\\Sowmiya\\My_blog\\backend\\blogDB\\connection.ini")
-# config_data  = config["credentials"]
-# try:
-#     mydatabase = msconnector.connect(
-#     host = config_data["host"],
-#     user = config_data["username"],
-#     password = config_data["password"],
-#     database = config_data["dbname"]
-#     )
-#     print("Connection made")
-# except:
-#     print("No connection made")
+now = datetime.now()
 
-# mycursor = mydatabase.cursor()
-# cursor = mydatabase.cursor(buffered=True)
+
+load_dotenv()
 
 app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS' ] = 'Content-Type'
 
-@app.route('/signupdetails', methods=["POST"])
-def signupdetails():
-    name = request.json.get('name', None)
-    print(name)
-    userName = request.json.get('userName', None)
-    print(userName)
-    return jsonify({'msg': 'signed up successfully'})
+SECRET_KEY = os.environ.get('SECRET_KEY')
+app.config['SECRET_KEY'] = SECRET_KEY
 
-app.run()
+@app.route('/registeruser', methods=["POST"])
+def registeruser():
+    try:
+        data = request.json
+        if not data:
+            return {
+                'message' : 'Please provide user details',
+                "data" : None,
+                "error" : "Bad request"
+            }, 400
+        user = User().create(**data)
+
+        if user == "userName":
+            return {
+                'message' : "User Name exists",
+                "error" : "Conflict",
+                "data" : None,
+            }, 409
+        elif user == "email":
+            return {
+                'message' : "Email exists",
+                "error" : "Conflict",
+                "data" : None,
+            }, 409
+        elif user == "phoneNumber":
+            return {
+                'message' : "Phone number exists",
+                "error" : "Conflict",
+                "data" : None,
+            }, 409
+        return {
+            'message' : "User created successfully",
+                "data" : user,
+        }, 201
+    except Exception as e:
+        return {
+            'message' : "Something went wrong",
+            "error" : str(e),
+            "data" : None,
+        }, 500
+
+@app.route('/loginuser', methods=["POST"])
+def loginuser():
+    try:
+        data = request.json
+        if not data:
+            return {
+                'message' : 'Please provide user details',
+                "data" : None,
+                "error" : "Bad request"
+            }, 400
+        user = User().login(data['userName'], data['password'])
+
+        if user:
+            try:
+                user["token"] = jwt.encode({
+                    "userName": user["userName"]},
+                    app.config["SECRET_KEY"],
+                    algorithm="HS256"
+                )
+                return {
+                    "message" : "Successfully fetched auth token",
+                    "data" : user
+                }
+            except Exception as e:
+                return {
+                    "error" : "Something went wrong",
+                    "message" : str(e)
+                }, 500
+        return {
+            "message" : "Error fetching auth token invalid username or password",
+            "data" : None,
+            "error" : "Unauthorized"
+        }, 404
+    except Exception as e:
+        return {
+            "message" : "Something went wrong",
+            "error" : str(e),
+            "data" : None
+        }, 500
+
+
+@app.route("/user/createBlogPost", methods=['POST'])
+@token_required
+def createBlog(current_user):
+    try:
+        data = request.json
+        data["dateTime"] = now.strftime("%d/%m/%Y  %H:%M:%S")
+        data["userName"] = current_user["userName"]
+        if not data:
+            return {
+                'message' : 'Provide post title and content',
+                "data" : None,
+                "error" : "Bad request"
+            }, 400
+        post = Post().create(**data)
+
+        if not post:
+            return {
+                'message' : "UserName not valid",
+                "error" : "conflict"
+            }, 409
+        return jsonify({
+            'message' : "Post created successfully",
+        }), 201
+    except Exception as e:
+        return jsonify({
+            'message' : "Failed to create the post",
+            "error" : str(e),
+            "data" : None,
+        }), 500
+
+
+# @app.route("/user/details")
+# @token_required
+# def getDetails(current_user):
+#     return {
+#         "name" : current_user['name'],
+#         "about" : current_user['email']
+#     }
+
+@app.route("/user/signout")
+@token_required
+def signout(current_user):
+    current_user["token"] = " "
+    return {
+        "message" : "logged out succesfully"
+    }
+
+
+@app.route("/user/allposts")
+@token_required
+def getallposts(current_user):
+    try:
+        posts = Post().get_all_posts(current_user["userName"])
+        return jsonify({
+            "message" : "Successfully returned all posts",
+            "data" : posts
+        })
+    except Exception as e:
+        return jsonify({
+            "message" : "Failed to retrieve posts",
+            "error" : str(e),
+            "data" : None
+        }), 500
+    
+
+
+app.run(debug=False)
+
+
+
+
+
+
+# @app.route('/updatepost/', methods=['POST'])
+# def editpost():
+#     """get the blog changes and update them"""
+#     pass
+
+# @app.route('/deletepost/', methods=['POST'])
+# def deletepost():
+#     """get blog id and delete i"""
+#     pass
+
+# @app.route('/listblogs', methods=['POST'])
+# def listblogs():
+#     """get user id and list all the blogs"""
+#     pass
+
+# @app.route('/searchblog', methods=['POST', 'GET'])
+# def searchblog():
+#     """get blog title, keywords, and list all the blogs with that title and keywords"""
+#     pass
+
+# @app.route('/logoutuser', methods=['POST'])
+# def logoutuser():
+#     """get user id and log out"""
+#     pass
+
+# @app.route('/deleteuser', methods=['POST'])
+# def deleteuser():
+#     """get user id and delete data"""
+#     pass
