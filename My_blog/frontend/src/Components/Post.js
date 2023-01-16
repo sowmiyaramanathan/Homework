@@ -1,15 +1,26 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function Post(props) {
+function Post({ post, index }) {
+
+  const navigate = useNavigate()
+
+
+  function showFullPost (post_id) {
+    let path = "/user/post/" + post_id
+    navigate(path)
+  }
+
+
   return (
     <div>
       <div>
-        <p onClick={props.clicked}>{props.post.title}</p>
+        <h2>{post[index].blogTitle}</h2>
       </div>
       <div>
-        <p>{props.post.content.slice(0, 200) + "...."}</p>
+        <p>{post.blogContent.slice(0, 200) + "...."}</p>
         <div>
-          <button onClick={props.clicked}>Read more</button>
+          <button onClick={() => {showFullPost(post.blogID)}}>Read more</button>
         </div>
       </div>
     </div>

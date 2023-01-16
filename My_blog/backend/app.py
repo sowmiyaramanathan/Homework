@@ -99,8 +99,7 @@ def loginuser():
             "data" : None
         }, 500
 
-
-@app.route("/user/createBlogPost", methods=['POST'])
+@app.route("/user/createBlogPost", methods=["POST"])
 @token_required
 def createBlog(current_user):
     try:
@@ -130,14 +129,12 @@ def createBlog(current_user):
             "data" : None,
         }), 500
 
-
-# @app.route("/user/details")
-# @token_required
-# def getDetails(current_user):
-#     return {
-#         "name" : current_user['name'],
-#         "about" : current_user['email']
-#     }
+@app.route("/user/details")
+@token_required
+def getDetails(current_user):
+    return {
+        "name" : current_user["name"]
+    }
 
 @app.route("/user/signout")
 @token_required
@@ -146,7 +143,6 @@ def signout(current_user):
     return {
         "message" : "logged out succesfully"
     }
-
 
 @app.route("/user/allposts")
 @token_required
@@ -163,10 +159,52 @@ def getallposts(current_user):
             "error" : str(e),
             "data" : None
         }), 500
-    
 
+@app.route("/user/post/<int:post_id>", methods = ["GET"])
+@token_required
+def get_fullpost(current_user, post_id):
+    try:
+        post = Post().get_by_id(post_id)
+        if not post:
+            return {
+                "message" : "Post not found",
+                "data" : None,
+                "error" : "Not Found"
+            }, 404
+        return jsonify({
+            "message" : "Successfully retrieved a post",
+            "data" : post
+        })
+    except Exception as e:
+        return jsonify({
+            "message" : "Something went wrong",
+            "error" : str(e),
+            "data" : None,
+        }), 500
 
 app.run(debug=False)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -181,21 +219,6 @@ app.run(debug=False)
 # @app.route('/deletepost/', methods=['POST'])
 # def deletepost():
 #     """get blog id and delete i"""
-#     pass
-
-# @app.route('/listblogs', methods=['POST'])
-# def listblogs():
-#     """get user id and list all the blogs"""
-#     pass
-
-# @app.route('/searchblog', methods=['POST', 'GET'])
-# def searchblog():
-#     """get blog title, keywords, and list all the blogs with that title and keywords"""
-#     pass
-
-# @app.route('/logoutuser', methods=['POST'])
-# def logoutuser():
-#     """get user id and log out"""
 #     pass
 
 # @app.route('/deleteuser', methods=['POST'])

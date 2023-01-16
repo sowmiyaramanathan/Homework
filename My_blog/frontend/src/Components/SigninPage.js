@@ -24,8 +24,12 @@ function SiginPage(props) {
       },
     })
       .then((response) => {
-        props.setToken(response.data.data.token);
-        navigate("/user/homepage");
+        const res = response.data.data;
+        console.log(res);
+        props.setToken(res.token);
+        res.token && props.setToken(res.token);
+        navigate('/user/homepage')
+        // history.pushState(url='/user/homepage')
       })
       .catch((error) => {
         if (error.response) {

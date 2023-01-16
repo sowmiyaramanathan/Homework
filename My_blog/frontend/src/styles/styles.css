@@ -1,7 +1,20 @@
 * {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: rgb(169, 139, 253);
+}
+/* homepage */
+.navBar {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.welcomeMessage {
+    align-items: center;
+    color: burlywood;
+}
+
+/* signinpage */
 .blogForm {
     display: flex;
     margin: 64px;

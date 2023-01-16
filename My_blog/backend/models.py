@@ -115,3 +115,12 @@ class Post():
         if not posts:
             return False
         return posts
+    
+    def get_by_id(self, post_id):
+        """get a post by its ID"""
+        get_post = "SELECT * FROM tbl_posts where postID = %s"
+        mycursor.execute(get_post, (post_id, ))
+        post = mycursor.fetchone()
+        if not post:
+            return False
+        return post

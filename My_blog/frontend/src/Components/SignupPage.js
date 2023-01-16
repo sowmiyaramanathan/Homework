@@ -1,6 +1,7 @@
 import React from "react";
 import { Form, Button } from "semantic-ui-react";
 import { Controller, useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 import "react-phone-number-input/style.css";
 import axios from 'axios';
@@ -14,6 +15,8 @@ function SigupPage() {
     control,
   } = useForm();
 
+  const navigate = useNavigate();
+
   function onSubmitSignup (details) {
     axios({
       method: 'post',
@@ -26,7 +29,8 @@ function SigupPage() {
         phoneNumber: details.phoneNumber
       }
     }).then((response) => {
-      alert(`${response.message}`)
+      alert(`${response.data.message}`);
+      navigate('/signin');
     }).catch((error) => {
       if(error.response) {
         alert(error.response.message)

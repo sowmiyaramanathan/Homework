@@ -11,6 +11,7 @@ function CreatePost(props) {
   const navigate = useNavigate();
 
   function createBlogPost() {
+    console.log("Hello")
     axios({
       method: "POST",
       url: "/user/createBlogPost",
@@ -61,7 +62,7 @@ function CreatePost(props) {
           ></textarea>
         </div>
         <div>
-          <button onSubmit={createBlogPost}>Post Blog</button>
+          <button onClick={createBlogPost}>Post Blog</button>
         </div>
       </div>
     </div>

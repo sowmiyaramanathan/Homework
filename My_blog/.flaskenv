@@ -1,2 +1,3 @@
 FLASK_APP = app.py
-FLASK_DEBUG =  development
+FLASK_DEBUG = 1
+FLASK_DEBUG = development
